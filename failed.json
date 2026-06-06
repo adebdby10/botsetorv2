@@ -1,0 +1,184 @@
+[
+  {
+    "ts": "2026-06-05T12:52:57",
+    "phone": "+62895342457452",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-05T12:52:57",
+    "phone": "+62895342457452",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "contact_restriction_zero_reply"
+  },
+  {
+    "ts": "2026-06-05T14:29:02",
+    "phone": "+6289529947470",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-05T14:29:02",
+    "phone": "+6289529947470",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "contact_restriction_zero_reply"
+  },
+  {
+    "ts": "2026-06-05T14:29:15",
+    "phone": "+6289638341695",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-05T14:29:15",
+    "phone": "+6289638341695",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "contact_restriction_zero_reply"
+  },
+  {
+    "ts": "2026-06-05T15:00:26",
+    "phone": "+6288214847407",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-05T15:00:26",
+    "phone": "+6288214847407",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "contact_restriction_zero_reply"
+  },
+  {
+    "ts": "2026-06-05T17:25:17",
+    "phone": "+6287719679213",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-05T17:25:17",
+    "phone": "+6287719679213",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "contact_restriction_zero_reply"
+  },
+  {
+    "ts": "2026-06-05T17:27:44",
+    "phone": "+6287847624842",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-05T18:29:09",
+    "phone": "+6285871279416",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-05T18:29:09",
+    "phone": "+6285871279416",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "contact_restriction_zero_reply"
+  },
+  {
+    "ts": "2026-06-05T18:40:21",
+    "phone": "+6281256808351",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-05T18:40:21",
+    "phone": "+6281256808351",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "contact_restriction_zero_reply"
+  },
+  {
+    "ts": "2026-06-05T18:42:17",
+    "phone": "+6281241296350",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-05T19:11:19",
+    "phone": "+6282247285317",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-05T20:27:19",
+    "phone": "+6283163878607",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-05T20:27:19",
+    "phone": "+6283163878607",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "contact_restriction_zero_reply"
+  },
+  {
+    "ts": "2026-06-05T20:27:25",
+    "phone": "+6283171717516",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-05T20:27:25",
+    "phone": "+6283171717516",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "contact_restriction_zero_reply"
+  },
+  {
+    "ts": "2026-06-05T20:28:00",
+    "phone": "+6283844852102",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-05T20:28:00",
+    "phone": "+6283844852102",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "contact_restriction_zero_reply"
+  },
+  {
+    "ts": "2026-06-05T20:28:09",
+    "phone": "+6282322552717",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-05T20:29:17",
+    "phone": "+628567037516",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-05T20:29:17",
+    "phone": "+628567037516",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "contact_restriction_zero_reply"
+  }
+]
