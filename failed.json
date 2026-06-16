@@ -180,5 +180,6620 @@
     "bot": "@ax_Global1Bot",
     "status": "failed",
     "extra": "contact_restriction_zero_reply"
+  },
+  {
+    "ts": "2026-06-08T02:30:47",
+    "phone": "-",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "unauthorized"
+  },
+  {
+    "ts": "2026-06-08T02:30:49",
+    "phone": "-",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "unauthorized"
+  },
+  {
+    "ts": "2026-06-08T02:33:09",
+    "phone": "-",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "unauthorized"
+  },
+  {
+    "ts": "2026-06-08T02:40:07",
+    "phone": "+6285781085199",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-08T02:40:59",
+    "phone": "+6285842620494",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-08T02:40:59",
+    "phone": "+6285842620494",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "contact_restriction_zero"
+  },
+  {
+    "ts": "2026-06-08T02:41:40",
+    "phone": "+6285842613237",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-08T02:41:40",
+    "phone": "+6285842613237",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "contact_restriction_zero"
+  },
+  {
+    "ts": "2026-06-08T02:44:06",
+    "phone": "+6285806030846",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-08T02:44:06",
+    "phone": "+6285806030846",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "contact_restriction_zero"
+  },
+  {
+    "ts": "2026-06-08T02:46:30",
+    "phone": "+6285745799036",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-08T02:46:30",
+    "phone": "+6285745799036",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "contact_restriction_zero"
+  },
+  {
+    "ts": "2026-06-08T02:47:14",
+    "phone": "+6285746594632",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-08T02:49:13",
+    "phone": "+6285842627364",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-08T02:49:13",
+    "phone": "+6285842627364",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "contact_restriction_zero"
+  },
+  {
+    "ts": "2026-06-08T02:49:21",
+    "phone": "+6285806030805",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-08T02:49:21",
+    "phone": "+6285806030805",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "contact_restriction_zero"
+  },
+  {
+    "ts": "2026-06-08T02:49:31",
+    "phone": "+6285777965780",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-08T02:50:44",
+    "phone": "+6285792897457",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-08T02:50:53",
+    "phone": "+6285842637379",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-08T02:51:00",
+    "phone": "+6285842625466",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-08T02:51:00",
+    "phone": "+6285842625466",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "contact_restriction_zero"
+  },
+  {
+    "ts": "2026-06-08T02:51:11",
+    "phone": "+6285806030818",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-08T02:51:11",
+    "phone": "+6285806030818",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "contact_restriction_zero"
+  },
+  {
+    "ts": "2026-06-08T02:51:17",
+    "phone": "+6285806030824",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-08T02:51:17",
+    "phone": "+6285806030824",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "contact_restriction_zero"
+  },
+  {
+    "ts": "2026-06-08T02:51:53",
+    "phone": "+6285806030848",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-08T02:51:53",
+    "phone": "+6285806030848",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "contact_restriction_zero"
+  },
+  {
+    "ts": "2026-06-08T02:52:04",
+    "phone": "+6285842627802",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-08T02:52:04",
+    "phone": "+6285842627802",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "contact_restriction_zero"
+  },
+  {
+    "ts": "2026-06-08T02:52:13",
+    "phone": "+6285781085277",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-08T02:52:20",
+    "phone": "+6285806019651",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-08T02:55:41",
+    "phone": "+6285800627413",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-08T02:55:53",
+    "phone": "+6285806030849",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-08T02:55:53",
+    "phone": "+6285806030849",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "contact_restriction_zero"
+  },
+  {
+    "ts": "2026-06-08T10:56:32",
+    "phone": "+6281374232356",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T10:56:39",
+    "phone": "+6288902902786",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-08T10:56:39",
+    "phone": "+6288902902786",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "contact_restriction_zero_reply"
+  },
+  {
+    "ts": "2026-06-08T10:56:54",
+    "phone": "+6285645112411",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-08T10:56:54",
+    "phone": "+6285645112411",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "contact_restriction_zero_reply"
+  },
+  {
+    "ts": "2026-06-08T10:57:02",
+    "phone": "+6285773460609",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T10:57:13",
+    "phone": "+6282120859015",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T10:57:21",
+    "phone": "+6281366086602",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T10:57:24",
+    "phone": "+6281387975666",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T10:57:31",
+    "phone": "+6282284648975",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T10:57:33",
+    "phone": "+6282124263919",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T10:57:38",
+    "phone": "+6285297642732",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T10:57:44",
+    "phone": "+6281378027721",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-08T10:57:44",
+    "phone": "+6281378027721",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "contact_restriction_zero_reply"
+  },
+  {
+    "ts": "2026-06-08T10:57:45",
+    "phone": "+628816360775",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-08T10:57:45",
+    "phone": "+628816360775",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "contact_restriction_zero_reply"
+  },
+  {
+    "ts": "2026-06-08T10:57:56",
+    "phone": "+6281632407019",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T10:58:11",
+    "phone": "+6281212246779",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T10:58:30",
+    "phone": "+6282210407721",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T10:58:38",
+    "phone": "+6285750935374",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T10:58:52",
+    "phone": "+6285703616247",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-08T10:58:58",
+    "phone": "+6285854645645",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T10:59:04",
+    "phone": "+6285334906917",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T10:59:21",
+    "phone": "+6283199572986",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T10:59:29",
+    "phone": "+6283180510170",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T10:59:32",
+    "phone": "+6283825287063",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T10:59:45",
+    "phone": "+6281532734904",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T10:59:54",
+    "phone": "+6283114504190",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T10:59:58",
+    "phone": "+6287712782727",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:00:15",
+    "phone": "+6281218645735",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-08T11:00:15",
+    "phone": "+6281218645735",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "contact_restriction_zero_reply"
+  },
+  {
+    "ts": "2026-06-08T11:00:41",
+    "phone": "+6289526819869",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:00:48",
+    "phone": "+6285206000306",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:00:48",
+    "phone": "+6282164850573",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:01:02",
+    "phone": "+6283822932011",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:01:04",
+    "phone": "+6288276723276",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-08T11:01:04",
+    "phone": "+6288276723276",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "contact_restriction_zero_reply"
+  },
+  {
+    "ts": "2026-06-08T11:01:23",
+    "phone": "+6282253790042",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:01:29",
+    "phone": "+6282285827811",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:01:39",
+    "phone": "+6289638617301",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:01:59",
+    "phone": "+6281333680315",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:02:18",
+    "phone": "+6281290945793",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-08T11:02:18",
+    "phone": "+6281290945793",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "contact_restriction_zero_reply"
+  },
+  {
+    "ts": "2026-06-08T11:02:23",
+    "phone": "+6285890236277",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:02:35",
+    "phone": "+6285701591664",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-08T11:02:35",
+    "phone": "+6285701591664",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "contact_restriction_zero_reply"
+  },
+  {
+    "ts": "2026-06-08T11:47:58",
+    "phone": "+6283137118141",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:47:59",
+    "phone": "+6289523241019",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:48:00",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:48:04",
+    "phone": "+6285814425320",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:48:04",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:48:09",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:48:23",
+    "phone": "+6281227254904",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:48:23",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:48:27",
+    "phone": "+6282328059214",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:48:27",
+    "phone": "+6285881521208",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:48:29",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:48:33",
+    "phone": "+6282315144500",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:48:34",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:48:37",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:48:42",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:48:46",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:48:54",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:48:58",
+    "phone": "+6285135451998",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:48:59",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:49:03",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:49:03",
+    "phone": "+6281292638569",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:49:07",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:49:13",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:49:17",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:49:18",
+    "phone": "+6281247801380",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:49:26",
+    "phone": "+6285246490756",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:49:32",
+    "phone": "+6282134888984",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:49:34",
+    "phone": "+6285697618859",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:49:35",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:49:40",
+    "phone": "+6285609016149",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:49:44",
+    "phone": "+6285700238452",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:49:48",
+    "phone": "+6282218791456",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:49:52",
+    "phone": "+6282347559500",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:49:54",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:49:58",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:50:01",
+    "phone": "+6281253158779",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:50:02",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:50:07",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:50:09",
+    "phone": "+6281359003455",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:50:09",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:50:12",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:50:21",
+    "phone": "+6285770622677",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:50:28",
+    "phone": "+6281316987470",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:50:30",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:50:32",
+    "phone": "+6289502687390",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:50:39",
+    "phone": "+6283872362351",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:50:39",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:50:43",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:50:45",
+    "phone": "+6282151663816",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:50:47",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:50:51",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:50:55",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:51:03",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:51:06",
+    "phone": "+6285236747714",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:51:09",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:51:12",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:51:13",
+    "phone": "+6289637947044",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:51:17",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:51:24",
+    "phone": "+6285806961229",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:51:32",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:51:37",
+    "phone": "+6282370632273",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-08T11:51:37",
+    "phone": "+6282370632273",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "contact_restriction_zero_reply"
+  },
+  {
+    "ts": "2026-06-08T11:51:39",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:51:41",
+    "phone": "+6285295999099",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:51:50",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:51:53",
+    "phone": "+6282274485780",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-08T11:51:53",
+    "phone": "+6282274485780",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "contact_restriction_zero_reply"
+  },
+  {
+    "ts": "2026-06-08T11:51:53",
+    "phone": "+6285781600003",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:52:03",
+    "phone": "+6285199794179",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:52:04",
+    "phone": "+6281277478336",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:52:10",
+    "phone": "+6283186746174",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:52:13",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:52:14",
+    "phone": "+6285762006230",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:52:17",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:52:18",
+    "phone": "+6285212358162",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:52:32",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:52:32",
+    "phone": "+6289527405476",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:52:33",
+    "phone": "+6281333093003",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:52:36",
+    "phone": "+6283159588979",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:52:42",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:52:42",
+    "phone": "+6285888857009",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:52:47",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:52:57",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:52:58",
+    "phone": "+6282115262205",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:53:01",
+    "phone": "+62895363557219",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:53:01",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:53:13",
+    "phone": "+6289654779591",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:53:17",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:53:17",
+    "phone": "+6285711470367",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:53:18",
+    "phone": "+6282289125814",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:53:21",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:53:25",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:53:27",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:53:30",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:53:39",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:53:41",
+    "phone": "+6282171107361",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T11:53:41",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:53:45",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:53:50",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T11:53:56",
+    "phone": "+6282211842152",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-08T13:33:54",
+    "phone": "+6282336166226",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-08T13:33:54",
+    "phone": "+6282336166226",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "contact_restriction_zero_reply"
+  },
+  {
+    "ts": "2026-06-08T13:35:34",
+    "phone": "+6285640319391",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-08T13:36:44",
+    "phone": "+62895329155286",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-08T13:36:44",
+    "phone": "+62895329155286",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "contact_restriction_zero_reply"
+  },
+  {
+    "ts": "2026-06-08T13:37:02",
+    "phone": "+6281333345543",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-08T13:38:49",
+    "phone": "+6287794651445",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-08T14:01:41",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T14:01:52",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T14:02:00",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T14:02:04",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T14:02:10",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T14:02:17",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T14:02:34",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T14:02:39",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T14:02:44",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T14:03:04",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T14:03:10",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T14:03:19",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T14:03:23",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T14:03:30",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T14:03:34",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T14:03:37",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T14:03:40",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T14:03:44",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T14:03:54",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T14:04:00",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T14:04:03",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T14:04:06",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T14:04:13",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T14:04:18",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T14:04:19",
+    "phone": "+6285338573692",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-08T14:04:19",
+    "phone": "+6285338573692",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "contact_restriction_zero_reply"
+  },
+  {
+    "ts": "2026-06-08T14:04:22",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T14:04:37",
+    "phone": "+6281545335918",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-08T14:04:37",
+    "phone": "+6281545335918",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "contact_restriction_zero_reply"
+  },
+  {
+    "ts": "2026-06-08T14:04:41",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T14:04:54",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T14:05:05",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T14:05:12",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T14:05:21",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T14:05:32",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T14:05:35",
+    "phone": "+6281346606033",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-08T14:05:35",
+    "phone": "+6281346606033",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "contact_restriction_zero_reply"
+  },
+  {
+    "ts": "2026-06-08T14:05:37",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T14:05:46",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T14:05:50",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T14:06:05",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T14:06:07",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T14:06:11",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T14:06:16",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T14:06:21",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T14:06:42",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T14:06:52",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T14:06:58",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T14:07:03",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T14:07:23",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T14:07:44",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T14:07:44",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T14:07:46",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T14:07:50",
+    "phone": "-",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-08T15:34:15",
+    "phone": "+6289636378418",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-08T15:34:15",
+    "phone": "+6289636378418",
+    "bot": "@GencuReceiverr_bot",
+    "status": "failed",
+    "extra": "contact_restriction_zero_reply"
+  },
+  {
+    "ts": "2026-06-08T15:35:13",
+    "phone": "+6287879848213",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-08T15:35:13",
+    "phone": "+6287879848213",
+    "bot": "@GencuReceiverr_bot",
+    "status": "failed",
+    "extra": "contact_restriction_zero_reply"
+  },
+  {
+    "ts": "2026-06-08T15:35:14",
+    "phone": "+6281215840289",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-08T15:35:14",
+    "phone": "+6281215840289",
+    "bot": "@GencuReceiverr_bot",
+    "status": "failed",
+    "extra": "contact_restriction_zero_reply"
+  },
+  {
+    "ts": "2026-06-08T15:35:33",
+    "phone": "+6281346258804",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-08T15:35:33",
+    "phone": "+6281346258804",
+    "bot": "@GencuReceiverr_bot",
+    "status": "failed",
+    "extra": "contact_restriction_zero_reply"
+  },
+  {
+    "ts": "2026-06-08T15:36:27",
+    "phone": "+6285753588633",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-08T15:36:27",
+    "phone": "+6285753588633",
+    "bot": "@GencuReceiverr_bot",
+    "status": "failed",
+    "extra": "contact_restriction_zero_reply"
+  },
+  {
+    "ts": "2026-06-08T15:36:59",
+    "phone": "+6289677572017",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-08T15:36:59",
+    "phone": "+6289677572017",
+    "bot": "@GencuReceiverr_bot",
+    "status": "failed",
+    "extra": "contact_restriction_zero_reply"
+  },
+  {
+    "ts": "2026-06-08T15:37:18",
+    "phone": "+6281397102944",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-08T15:37:18",
+    "phone": "+6281397102944",
+    "bot": "@GencuReceiverr_bot",
+    "status": "failed",
+    "extra": "contact_restriction_zero_reply"
+  },
+  {
+    "ts": "2026-06-08T15:38:02",
+    "phone": "+6283895678022",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-08T15:38:02",
+    "phone": "+6283895678022",
+    "bot": "@GencuReceiverr_bot",
+    "status": "failed",
+    "extra": "contact_restriction_zero_reply"
+  },
+  {
+    "ts": "2026-06-08T15:38:11",
+    "phone": "+6283168959791",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-08T15:38:11",
+    "phone": "+6283168959791",
+    "bot": "@GencuReceiverr_bot",
+    "status": "failed",
+    "extra": "contact_restriction_zero_reply"
+  },
+  {
+    "ts": "2026-06-08T15:38:39",
+    "phone": "+6289699351360",
+    "bot": "@GencuReceiverr_bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-08T15:40:14",
+    "phone": "+6282257683841",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-08T15:40:14",
+    "phone": "+6282257683841",
+    "bot": "@GencuReceiverr_bot",
+    "status": "failed",
+    "extra": "contact_restriction_zero_reply"
+  },
+  {
+    "ts": "2026-06-08T15:40:45",
+    "phone": "+6285194229395",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-08T15:40:45",
+    "phone": "+6285194229395",
+    "bot": "@GencuReceiverr_bot",
+    "status": "failed",
+    "extra": "contact_restriction_zero_reply"
+  },
+  {
+    "ts": "2026-06-09T09:29:23",
+    "phone": "+6281252023224",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-09T09:29:23",
+    "phone": "+6281252023224",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "contact_restriction_zero"
+  },
+  {
+    "ts": "2026-06-09T09:37:00",
+    "phone": "+6282284548650",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-09T14:01:47",
+    "phone": "+6281274988189",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-09T14:01:47",
+    "phone": "+6281274988189",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "contact_restriction_zero_reply"
+  },
+  {
+    "ts": "2026-06-09T16:29:28",
+    "phone": "+6283872390886",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_reply"
+  },
+  {
+    "ts": "2026-06-09T16:29:38",
+    "phone": "+6285859939499",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_reply"
+  },
+  {
+    "ts": "2026-06-09T16:30:01",
+    "phone": "+6285656653250",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_reply"
+  },
+  {
+    "ts": "2026-06-09T16:31:34",
+    "phone": "+628121730726",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_reply"
+  },
+  {
+    "ts": "2026-06-09T16:31:40",
+    "phone": "+628211242667",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_reply"
+  },
+  {
+    "ts": "2026-06-09T16:33:10",
+    "phone": "+6287723026013",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_reply"
+  },
+  {
+    "ts": "2026-06-09T16:33:33",
+    "phone": "+6282163915977",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_reply"
+  },
+  {
+    "ts": "2026-06-09T16:33:48",
+    "phone": "+6281400610213",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_reply"
+  },
+  {
+    "ts": "2026-06-09T16:35:11",
+    "phone": "+6285339260773",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_reply"
+  },
+  {
+    "ts": "2026-06-09T16:35:11",
+    "phone": "+6282281140647",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_reply"
+  },
+  {
+    "ts": "2026-06-09T16:35:27",
+    "phone": "+6285710377784",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_reply"
+  },
+  {
+    "ts": "2026-06-09T17:12:23",
+    "phone": "+6282230097966",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_reply"
+  },
+  {
+    "ts": "2026-06-09T17:12:36",
+    "phone": "+6287831947092",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_reply"
+  },
+  {
+    "ts": "2026-06-09T17:50:27",
+    "phone": "+6281263231928",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_reply"
+  },
+  {
+    "ts": "2026-06-09T17:50:31",
+    "phone": "+6287810865620",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_reply"
+  },
+  {
+    "ts": "2026-06-09T17:50:37",
+    "phone": "+6281274420458",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-09T17:51:42",
+    "phone": "+6283808344455",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_reply"
+  },
+  {
+    "ts": "2026-06-09T17:54:07",
+    "phone": "+6288994540990",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-09T17:54:18",
+    "phone": "+6281353460226",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-09T21:54:01",
+    "phone": "+6282151085424",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "no_enter_code"
+  },
+  {
+    "ts": "2026-06-09T22:03:26",
+    "phone": "+6281251431992",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "no_enter_code"
+  },
+  {
+    "ts": "2026-06-09T23:00:58",
+    "phone": "+6285695009450",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "unknown_state"
+  },
+  {
+    "ts": "2026-06-09T23:24:11",
+    "phone": "+6281283194117",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_reply"
+  },
+  {
+    "ts": "2026-06-09T23:25:06",
+    "phone": "+628895350440",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_reply"
+  },
+  {
+    "ts": "2026-06-09T23:25:14",
+    "phone": "+6281365396466",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_reply"
+  },
+  {
+    "ts": "2026-06-09T23:25:59",
+    "phone": "+6281222861060",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-09T23:26:29",
+    "phone": "+628567096951",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_reply"
+  },
+  {
+    "ts": "2026-06-09T23:29:37",
+    "phone": "+6285362577492",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_reply"
+  },
+  {
+    "ts": "2026-06-09T23:31:23",
+    "phone": "+6282257710883",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_reply"
+  },
+  {
+    "ts": "2026-06-09T23:31:47",
+    "phone": "+6285180764850",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_reply"
+  },
+  {
+    "ts": "2026-06-09T23:32:04",
+    "phone": "+6288214830558",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_reply"
+  },
+  {
+    "ts": "2026-06-09T23:34:06",
+    "phone": "+6281236104122",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_reply"
+  },
+  {
+    "ts": "2026-06-09T23:34:30",
+    "phone": "+6283873753659",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_reply"
+  },
+  {
+    "ts": "2026-06-09T23:35:27",
+    "phone": "+6283111375182",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_reply"
+  },
+  {
+    "ts": "2026-06-09T23:35:57",
+    "phone": "+6282146234218",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_reply"
+  },
+  {
+    "ts": "2026-06-09T23:36:54",
+    "phone": "+6283100601039",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_reply"
+  },
+  {
+    "ts": "2026-06-09T23:36:56",
+    "phone": "+6285183714455",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_reply"
+  },
+  {
+    "ts": "2026-06-09T23:38:23",
+    "phone": "+6287746555788",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-09T23:39:04",
+    "phone": "+6285184109889",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-09T23:39:05",
+    "phone": "+6282360344368",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-09T23:39:09",
+    "phone": "+6282288882174",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-09T23:39:10",
+    "phone": "+628895633464",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-09T23:39:15",
+    "phone": "+6281320141800",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-09T23:39:20",
+    "phone": "+6282184994152",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-09T23:39:26",
+    "phone": "+6282252554395",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-09T23:39:27",
+    "phone": "+6281917053964",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-09T23:39:32",
+    "phone": "+6285723312600",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-09T23:40:35",
+    "phone": "+6283838532997",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-09T23:41:16",
+    "phone": "+6289507926941",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-09T23:41:18",
+    "phone": "+6285199209669",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-09T23:41:19",
+    "phone": "+6285321705011",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-09T23:41:20",
+    "phone": "+6282283321188",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-09T23:41:28",
+    "phone": "+6282296237014",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-09T23:41:30",
+    "phone": "+6285817639327",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-09T23:41:35",
+    "phone": "+6289525893975",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-09T23:41:38",
+    "phone": "+6285751684329",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-09T23:41:41",
+    "phone": "+6285281440213",
+    "bot": "@ax_Global1Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T00:05:36",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:05:37",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:05:38",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:05:38",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:05:40",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:05:41",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:05:42",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:05:43",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:05:44",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:05:45",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:05:46",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:05:47",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:05:47",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:05:49",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:05:49",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:05:50",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:05:52",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:05:53",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:05:54",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:05:57",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:05:58",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:05:59",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:02",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:03",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:03",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:04",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:05",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:06",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:09",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:09",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:11",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:12",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:12",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:13",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:14",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:15",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:16",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:17",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:18",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:19",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:20",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:21",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:22",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:23",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:24",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:26",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:26",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:28",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:29",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:31",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:31",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:33",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:33",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:34",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:36",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:37",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:38",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:39",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:40",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:41",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:44",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:45",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:46",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:46",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:47",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:49",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:50",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:51",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:52",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:53",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:55",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:56",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:57",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:58",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:06:59",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:07:00",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:07:01",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:07:02",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:07:03",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:07:05",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:07:05",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:07:06",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:07:07",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:07:08",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:07:10",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:07:11",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:07:12",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:07:13",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:07:15",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:07:16",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:07:16",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:07:18",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T00:07:59",
+    "phone": "+6281283194117",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T00:08:00",
+    "phone": "+6281365396466",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T00:08:02",
+    "phone": "+6287746555788",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-10T00:08:04",
+    "phone": "+6281222861060",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T00:08:05",
+    "phone": "+628895350440",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T00:08:11",
+    "phone": "+628567096951",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T00:08:17",
+    "phone": "+6281320141800",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-10T00:08:19",
+    "phone": "+6282288882174",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-10T00:08:33",
+    "phone": "+6285362577492",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T00:08:43",
+    "phone": "+6282257710883",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T00:08:45",
+    "phone": "+6285180764850",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T00:08:46",
+    "phone": "+6288214830558",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T00:08:58",
+    "phone": "+6281236104122",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T00:08:59",
+    "phone": "+6283873753659",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T00:09:08",
+    "phone": "+6283111375182",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T00:09:12",
+    "phone": "+6282146234218",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T00:09:18",
+    "phone": "+6283100601039",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T00:09:19",
+    "phone": "+6285183714455",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T00:11:30",
+    "phone": "+6289603085846",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T00:11:42",
+    "phone": "+6285843773659",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T00:12:04",
+    "phone": "+6288807464938",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T00:12:10",
+    "phone": "+6285741372493",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T00:12:11",
+    "phone": "+6282301058611",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T00:12:12",
+    "phone": "+6281558993243",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T00:12:13",
+    "phone": "+6283114281788",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T00:22:41",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:22:42",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:22:43",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:22:44",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:22:44",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:22:45",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:22:46",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:22:47",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:22:48",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:22:49",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:22:50",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:22:51",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:22:52",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:22:54",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:22:55",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:22:56",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:22:57",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:22:58",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:23:00",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:23:01",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:25:54",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:25:55",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:25:58",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:25:59",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:26:00",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:26:02",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:26:04",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:26:06",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:26:08",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:26:10",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:27:00",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:27:01",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:27:04",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:27:05",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:27:06",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:27:09",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:27:10",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:27:12",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:27:14",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:40:54",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:40:57",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:40:59",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:41:03",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:41:05",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:41:08",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:41:10",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:41:12",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:41:14",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:41:15",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:41:53",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:42:00",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:42:05",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:42:09",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:42:11",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:42:14",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:42:16",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:42:18",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:42:20",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:42:21",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:42:59",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:43:07",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:43:11",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:43:15",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:43:17",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:43:20",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:43:22",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:43:24",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:43:26",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T00:43:27",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "open_error_reply: Connection to Telegram failed 5 time(s)"
+  },
+  {
+    "ts": "2026-06-10T01:12:55",
+    "phone": "+62895329009328",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "late_rejected_recover_failed"
+  },
+  {
+    "ts": "2026-06-10T01:14:54",
+    "phone": "+6285213211947",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "late_rejected_recover_failed"
+  },
+  {
+    "ts": "2026-06-10T01:15:03",
+    "phone": "+62881036740505.session",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "connect_timeout_reply"
+  },
+  {
+    "ts": "2026-06-10T01:16:22",
+    "phone": "+6282310614030",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "late_rejected_recover_failed"
+  },
+  {
+    "ts": "2026-06-10T01:16:49",
+    "phone": "+62887433461126",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "late_rejected_recover_failed"
+  },
+  {
+    "ts": "2026-06-10T01:55:05",
+    "phone": "+628977776242",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T01:56:23",
+    "phone": "+6281270620215",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T01:58:37",
+    "phone": "+628812830809",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "late_rejected_recover_failed"
+  },
+  {
+    "ts": "2026-06-10T01:58:54",
+    "phone": "+6283117656788",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "late_rejected_recover_failed"
+  },
+  {
+    "ts": "2026-06-10T01:59:05",
+    "phone": "+6285283159974",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T01:59:25",
+    "phone": "+6287860953864",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "late_rejected_recover_failed"
+  },
+  {
+    "ts": "2026-06-10T01:59:40",
+    "phone": "+6282362076157",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "late_rejected_recover_failed"
+  },
+  {
+    "ts": "2026-06-10T02:01:57",
+    "phone": "+62895415508952",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T02:26:39",
+    "phone": "-",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T02:26:40",
+    "phone": "-",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T02:26:44",
+    "phone": "-",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T02:26:44",
+    "phone": "-",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T02:26:47",
+    "phone": "-",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T02:26:47",
+    "phone": "-",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T02:26:48",
+    "phone": "-",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T02:26:48",
+    "phone": "-",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T02:26:50",
+    "phone": "-",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T02:26:52",
+    "phone": "-",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T02:26:53",
+    "phone": "-",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T02:26:55",
+    "phone": "-",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T02:26:59",
+    "phone": "-",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T02:27:00",
+    "phone": "-",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T02:27:02",
+    "phone": "-",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T02:27:06",
+    "phone": "-",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T02:28:55",
+    "phone": "-",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T02:28:57",
+    "phone": "-",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T02:28:59",
+    "phone": "-",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T02:29:03",
+    "phone": "-",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T02:29:05",
+    "phone": "-",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T02:29:09",
+    "phone": "-",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T02:29:11",
+    "phone": "-",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T02:29:15",
+    "phone": "-",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T02:29:24",
+    "phone": "+6281222861060.session",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "connect_timeout_reply"
+  },
+  {
+    "ts": "2026-06-10T02:29:34",
+    "phone": "+6282360344368",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T02:30:04",
+    "phone": "+628895633464.session",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "connect_timeout_reply"
+  },
+  {
+    "ts": "2026-06-10T02:31:02",
+    "phone": "+6281365396466",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T02:31:12",
+    "phone": "+6282257710883",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T02:31:13",
+    "phone": "+6282252554395",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T02:31:21",
+    "phone": "+6285723312600",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T02:31:21",
+    "phone": "+6281917053964",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T02:31:24",
+    "phone": "+6283873753659",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T02:31:26",
+    "phone": "+6282146234218",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T02:31:27",
+    "phone": "+6283100601039",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T02:31:29",
+    "phone": "+6289507926941",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T02:31:31",
+    "phone": "+6285183714455",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T02:31:32",
+    "phone": "+6285321705011",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T02:31:33",
+    "phone": "+6283838532997",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T02:31:34",
+    "phone": "+6285199209669",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T02:31:35",
+    "phone": "+6282288882174",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T02:31:35",
+    "phone": "+6281320141800",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T02:31:36",
+    "phone": "+6282283321188",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T02:31:38",
+    "phone": "+6287746555788",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T02:31:40",
+    "phone": "+6285751684329",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T02:31:40",
+    "phone": "+6282296237014",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T02:31:41",
+    "phone": "+6285281440213",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T02:31:45",
+    "phone": "+6288239811408",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T02:31:47",
+    "phone": "+6281311972081",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T02:31:47",
+    "phone": "+6283875332311",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T02:31:48",
+    "phone": "+6285147666825",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T02:31:48",
+    "phone": "+6289673705828",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T02:31:51",
+    "phone": "+6281258641740",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T02:31:52",
+    "phone": "+6281386478095",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T02:31:52",
+    "phone": "+6283894570009",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T02:31:57",
+    "phone": "+6285122103512",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T02:31:57",
+    "phone": "+6287851681008",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T02:31:58",
+    "phone": "+6285280463869",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T02:32:01",
+    "phone": "+6283150277531",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T02:32:22",
+    "phone": "+6282184994152",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T02:32:26",
+    "phone": "+6285174398167",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T02:32:31",
+    "phone": "+6287827775489",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T02:32:31",
+    "phone": "+6283114281788.session",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "connect_timeout_reply"
+  },
+  {
+    "ts": "2026-06-10T02:32:34",
+    "phone": "+6285814573686",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T02:32:38",
+    "phone": "+6285871816558",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T02:32:40",
+    "phone": "+6283192986770",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T02:32:43",
+    "phone": "+6285142530520",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T02:32:44",
+    "phone": "+6283896192712",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T02:33:44",
+    "phone": "+6285817639327",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T02:33:57",
+    "phone": "+6282381337383",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T02:34:02",
+    "phone": "+6285805159575",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T02:37:20",
+    "phone": "+628983649404.session",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "connect_timeout_reply"
+  },
+  {
+    "ts": "2026-06-10T02:38:03",
+    "phone": "+6285641417303",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-10T02:38:07",
+    "phone": "+628816695028.session",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "connect_timeout_reply"
+  },
+  {
+    "ts": "2026-06-10T02:38:35",
+    "phone": "+6281237390355",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-10T02:39:18",
+    "phone": "+6285642939070.session",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "connect_timeout_reply"
+  },
+  {
+    "ts": "2026-06-10T02:41:58",
+    "phone": "+6283840516608",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-10T02:42:25",
+    "phone": "+628813152739",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-10T02:42:45",
+    "phone": "+6285692902496",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-10T02:43:25",
+    "phone": "+6285134842148",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-10T02:43:40",
+    "phone": "+6288707782649.session",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "connect_timeout_reply"
+  },
+  {
+    "ts": "2026-06-10T02:44:18",
+    "phone": "+6285839545395",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T02:44:27",
+    "phone": "+628131764790",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T02:45:16",
+    "phone": "+6285147358397",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-10T02:46:13",
+    "phone": "+628137484665.session",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "connect_timeout_reply"
+  },
+  {
+    "ts": "2026-06-10T02:46:27",
+    "phone": "+6285271612244",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T02:47:28",
+    "phone": "+6283159182053.session",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "connect_timeout_reply"
+  },
+  {
+    "ts": "2026-06-10T02:47:38",
+    "phone": "+6283843115813",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-10T02:53:55",
+    "phone": "+971589761733",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "no_enter_code"
+  },
+  {
+    "ts": "2026-06-10T03:06:55",
+    "phone": "-",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "unauthorized"
+  },
+  {
+    "ts": "2026-06-10T03:10:48",
+    "phone": "+6285702799784",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "no_enter_code"
+  },
+  {
+    "ts": "2026-06-10T03:44:30",
+    "phone": "+62895331143710.session",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "connect_timeout"
+  },
+  {
+    "ts": "2026-06-10T03:45:21",
+    "phone": "+6282276228416",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "no_enter_code"
+  },
+  {
+    "ts": "2026-06-10T09:10:33",
+    "phone": "+628895633464",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T09:10:34",
+    "phone": "+6282360344368",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T09:10:43",
+    "phone": "+6281917053964",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T09:10:48",
+    "phone": "+6282252554395",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T09:10:50",
+    "phone": "+6285723312600",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T09:10:55",
+    "phone": "+6283838532997",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T09:10:58",
+    "phone": "+6289507926941",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T09:11:09",
+    "phone": "+6285321705011",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T09:11:11",
+    "phone": "+6285199209669",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T09:11:13",
+    "phone": "+6282283321188",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T09:11:16",
+    "phone": "+6282296237014",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T09:11:23",
+    "phone": "+6285751684329",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T09:11:35",
+    "phone": "+6285281440213",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T09:11:42",
+    "phone": "+6285147666825",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T09:11:48",
+    "phone": "+6283875332311",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T09:12:19",
+    "phone": "+6288239811408.session",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "connect_timeout_reply"
+  },
+  {
+    "ts": "2026-06-10T09:12:19",
+    "phone": "+6281222861060",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T09:12:21",
+    "phone": "+6282146234218",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T09:12:23",
+    "phone": "+6283100601039",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T09:12:24",
+    "phone": "+6285183714455",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T09:12:24",
+    "phone": "+6289673705828",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T09:12:26",
+    "phone": "+6281311972081",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T09:12:28",
+    "phone": "+6287746555788",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T09:12:33",
+    "phone": "+6281386478095",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T09:12:33",
+    "phone": "+6282288882174",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T09:12:34",
+    "phone": "+6283894570009",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T09:12:35",
+    "phone": "+6281258641740",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T09:12:35",
+    "phone": "+6281320141800",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T09:12:36",
+    "phone": "+6285122103512",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T09:12:37",
+    "phone": "+6282184994152",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T09:12:38",
+    "phone": "+6287851681008",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T09:12:44",
+    "phone": "+6283150277531",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T09:12:44",
+    "phone": "+6285814573686",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T09:12:44",
+    "phone": "+6285280463869",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T09:12:46",
+    "phone": "+6285174398167",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T09:12:49",
+    "phone": "+6285871816558",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T09:12:51",
+    "phone": "+6287827775489",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T09:12:51",
+    "phone": "+6283896192712",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T09:12:53",
+    "phone": "+6283192986770",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T09:12:53",
+    "phone": "+6285142530520",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "precheck_failed_reply"
+  },
+  {
+    "ts": "2026-06-10T09:13:24",
+    "phone": "+6285817639327",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T09:14:37",
+    "phone": "+6282381337383",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T09:14:47",
+    "phone": "+6285805159575",
+    "bot": "@XrReceiver4_bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:25:46",
+    "phone": "+6285710789099.session",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "connect_timeout"
+  },
+  {
+    "ts": "2026-06-10T11:28:13",
+    "phone": "+6285878168662",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:28:16",
+    "phone": "+6285755008490",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:28:17",
+    "phone": "+6281261035401",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:28:20",
+    "phone": "+6285750258867",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:28:22",
+    "phone": "+6283890860246",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:28:24",
+    "phone": "+6285814411234",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:28:27",
+    "phone": "+6282268764884",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:28:29",
+    "phone": "+6281584838716",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:28:30",
+    "phone": "+6285245967628",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:28:32",
+    "phone": "+6283869421991",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:30:20",
+    "phone": "+6283862672087",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:30:26",
+    "phone": "+6282272205764",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:30:31",
+    "phone": "+6281995268002",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:30:32",
+    "phone": "+6285884024568",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:30:35",
+    "phone": "+6283167828625",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:30:35",
+    "phone": "+6281945019525",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:30:40",
+    "phone": "+6282138928415",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:30:40",
+    "phone": "+6287723448868",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:30:40",
+    "phone": "+6283192602396",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:30:44",
+    "phone": "+6285701571542",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:31:10",
+    "phone": "+6281294624448.session",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "connect_timeout_reply"
+  },
+  {
+    "ts": "2026-06-10T11:32:32",
+    "phone": "+6281932511502",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:32:35",
+    "phone": "+6282274279823",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:32:40",
+    "phone": "+6283877200914",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:32:46",
+    "phone": "+6285809574572",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:32:46",
+    "phone": "+6281213334886",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:32:49",
+    "phone": "+6285119901079",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:32:51",
+    "phone": "+6282125360212",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:32:53",
+    "phone": "+6285709341192",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:32:57",
+    "phone": "+6281216391857",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:33:20",
+    "phone": "+62895602155234.session",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "connect_timeout_reply"
+  },
+  {
+    "ts": "2026-06-10T11:33:20",
+    "phone": "+6282277144185",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:34:42",
+    "phone": "+6285713875481",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:34:46",
+    "phone": "+6287755355099",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:34:50",
+    "phone": "+6282341464599",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:34:57",
+    "phone": "+6285880670224",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:34:59",
+    "phone": "+6289503241841",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:35:03",
+    "phone": "+6283873499697",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:35:03",
+    "phone": "+6281927583289",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:35:07",
+    "phone": "+6287815806050",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:35:30",
+    "phone": "+6289530887993",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:35:37",
+    "phone": "+6285819562706",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:36:55",
+    "phone": "+6282169510249",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:36:57",
+    "phone": "+6289517382994",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:36:58",
+    "phone": "+6285756640612",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:37:04",
+    "phone": "+6285735726007",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:37:09",
+    "phone": "+6282280013003",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:37:13",
+    "phone": "+6281295326327",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:37:13",
+    "phone": "+62816913879",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:37:16",
+    "phone": "+6282170429103",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:37:43",
+    "phone": "+6281216341745",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:37:51",
+    "phone": "+628558092969",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:38:24",
+    "phone": "+6289654600076.session",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "connect_timeout_reply"
+  },
+  {
+    "ts": "2026-06-10T11:39:19",
+    "phone": "+6282284273097.session",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "connect_timeout_reply"
+  },
+  {
+    "ts": "2026-06-10T11:42:20",
+    "phone": "+62895341587722",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:42:25",
+    "phone": "+6282362233932",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T11:42:57",
+    "phone": "+628216959365",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-10T11:43:07",
+    "phone": "+6285381764211",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-10T11:43:30",
+    "phone": "+6282219381519",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-10T11:46:59",
+    "phone": "+6285691099351.session",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "connect_timeout"
+  },
+  {
+    "ts": "2026-06-10T11:54:03",
+    "phone": "+6288809242780.session",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "connect_timeout"
+  },
+  {
+    "ts": "2026-06-10T12:14:08",
+    "phone": "+6285814411234",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-10T12:14:10",
+    "phone": "+6285750258867",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-10T12:14:32",
+    "phone": "+6282272205764",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-10T12:14:33",
+    "phone": "+6283869421991",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-10T12:14:40",
+    "phone": "+6287723448868",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-10T12:14:52",
+    "phone": "+6285701571542",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-10T12:15:08",
+    "phone": "+6283877200914",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-10T12:15:23",
+    "phone": "+6285713875481",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-10T12:15:32",
+    "phone": "+6287755355099",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-10T12:15:33",
+    "phone": "+6285119901079",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-10T12:15:59",
+    "phone": "+6281927583289",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-10T12:16:06",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T12:16:08",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T12:16:11",
+    "phone": "-",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-10T12:16:19",
+    "phone": "+6285756640612",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-10T12:16:33",
+    "phone": "+62816913879",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-10T12:16:50",
+    "phone": "+6289654600076",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-10T12:16:54",
+    "phone": "+62895341587722",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-10T12:17:09",
+    "phone": "+62895602155234",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T12:17:14",
+    "phone": "+6289503241841",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T12:17:23",
+    "phone": "+6287884369130",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-10T12:17:26",
+    "phone": "+6289673452898",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-10T12:17:36",
+    "phone": "+6285859315418",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-10T12:17:36",
+    "phone": "+6285895417944",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-10T12:18:27",
+    "phone": "+6285762370277",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-10T12:18:42",
+    "phone": "+6285840711920",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-10T12:19:49",
+    "phone": "+6285705502048",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T12:19:59",
+    "phone": "+6281311786200",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T12:20:32",
+    "phone": "+6285758570566",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-10T12:20:57",
+    "phone": "+6281521535672",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-10T12:21:32",
+    "phone": "+6283157110510",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-10T12:22:07",
+    "phone": "+6281266878294",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-10T12:22:19",
+    "phone": "+6283849040445",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-10T13:09:51",
+    "phone": "+6289685821329",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-10T13:09:51",
+    "phone": "+6289685821329",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "contact_restriction_zero"
+  },
+  {
+    "ts": "2026-06-10T13:19:29",
+    "phone": "+6285643235109",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "conv_error: "
+  },
+  {
+    "ts": "2026-06-10T13:19:51",
+    "phone": "+6282131181685",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "conv_error: "
+  },
+  {
+    "ts": "2026-06-10T13:20:13",
+    "phone": "+6283861551962",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "conv_error: "
+  },
+  {
+    "ts": "2026-06-10T13:20:34",
+    "phone": "+6281361117866",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "conv_error: "
+  },
+  {
+    "ts": "2026-06-10T13:20:53",
+    "phone": "+6285267190053",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "conv_error: "
+  },
+  {
+    "ts": "2026-06-10T13:21:19",
+    "phone": "+628212055805",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "conv_error: "
+  },
+  {
+    "ts": "2026-06-10T13:21:41",
+    "phone": "+6282210626269",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "conv_error: "
+  },
+  {
+    "ts": "2026-06-10T13:22:03",
+    "phone": "+6282246440702",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "conv_error: "
+  },
+  {
+    "ts": "2026-06-10T13:22:29",
+    "phone": "+6282190595063",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "conv_error: "
+  },
+  {
+    "ts": "2026-06-10T13:22:52",
+    "phone": "+6282120888613",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "conv_error: "
+  },
+  {
+    "ts": "2026-06-10T13:23:13",
+    "phone": "+6282339316266",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "conv_error: "
+  },
+  {
+    "ts": "2026-06-10T13:29:22",
+    "phone": "+6289685821329",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-10T13:29:22",
+    "phone": "+6289685821329",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "contact_restriction_zero"
+  },
+  {
+    "ts": "2026-06-10T14:06:10",
+    "phone": "+6289510204587.session",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "connect_timeout"
+  },
+  {
+    "ts": "2026-06-10T14:14:50",
+    "phone": "+6282199879890.session",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "connect_timeout"
+  },
+  {
+    "ts": "2026-06-10T21:01:40",
+    "phone": "+62859730055571",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "unknown_state"
+  },
+  {
+    "ts": "2026-06-10T21:22:32",
+    "phone": "+6285719312702",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-10T21:22:32",
+    "phone": "+6285719312702",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "contact_restriction_zero"
+  },
+  {
+    "ts": "2026-06-10T21:25:33",
+    "phone": "+62859737623536.session",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "connect_timeout"
+  },
+  {
+    "ts": "2026-06-10T21:32:06",
+    "phone": "+6283834659353.session",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "connect_timeout"
+  },
+  {
+    "ts": "2026-06-11T01:21:35",
+    "phone": "+6285297642732",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-11T01:21:42",
+    "phone": "+6282210407721",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-11T01:22:12",
+    "phone": "+6283199572986.session",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "connect_timeout"
+  },
+  {
+    "ts": "2026-06-11T01:22:23",
+    "phone": "+6283180510170",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-11T01:22:31",
+    "phone": "+6282138052426",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-11T01:22:39",
+    "phone": "+6281532734904",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-11T01:22:48",
+    "phone": "+6283114504190",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-11T01:22:56",
+    "phone": "+6289638617301",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-11T01:31:47",
+    "phone": "+6282210407721",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "unknown_state"
+  },
+  {
+    "ts": "2026-06-11T01:38:14",
+    "phone": "-",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "unauthorized"
+  },
+  {
+    "ts": "2026-06-11T01:38:17",
+    "phone": "-",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "unauthorized"
+  },
+  {
+    "ts": "2026-06-11T01:38:19",
+    "phone": "-",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "unauthorized"
+  },
+  {
+    "ts": "2026-06-11T01:38:25",
+    "phone": "-",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "unauthorized"
+  },
+  {
+    "ts": "2026-06-11T01:38:27",
+    "phone": "-",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "unauthorized"
+  },
+  {
+    "ts": "2026-06-11T18:10:38",
+    "phone": "+60173094239",
+    "bot": "@Receiverspacerobot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-11T18:10:40",
+    "phone": "+601128185074",
+    "bot": "@Receiverspacerobot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-11T18:10:43",
+    "phone": "+60197339769",
+    "bot": "@Receiverspacerobot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-11T18:10:43",
+    "phone": "+60102401345",
+    "bot": "@Receiverspacerobot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-11T18:10:44",
+    "phone": "+60175670775",
+    "bot": "@Receiverspacerobot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-11T18:10:48",
+    "phone": "+601114250718",
+    "bot": "@Receiverspacerobot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-11T18:10:49",
+    "phone": "+60195022968",
+    "bot": "@Receiverspacerobot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-11T18:10:52",
+    "phone": "+60168585124",
+    "bot": "@Receiverspacerobot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-11T18:10:55",
+    "phone": "+60107768478",
+    "bot": "@Receiverspacerobot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-11T18:10:57",
+    "phone": "+60177844612",
+    "bot": "@Receiverspacerobot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-12T15:35:49",
+    "phone": "+601135306216",
+    "bot": "@Receiverspacerobot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-12T15:39:52",
+    "phone": "+60163208662",
+    "bot": "@Receiverspacerobot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-12T15:45:07",
+    "phone": "+601172597509",
+    "bot": "@Receiverspacerobot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-12T15:45:07",
+    "phone": "+60192100211",
+    "bot": "@Receiverspacerobot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-12T15:46:16",
+    "phone": "+601127560458",
+    "bot": "@Receiverspacerobot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-12T15:53:53",
+    "phone": "+60137027063",
+    "bot": "@Receiverspacerobot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-12T15:54:35",
+    "phone": "+60122566362",
+    "bot": "@Receiverspacerobot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-12T15:56:19",
+    "phone": "+60172733728",
+    "bot": "@Receiverspacerobot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-12T15:56:25",
+    "phone": "+601123530058",
+    "bot": "@Receiverspacerobot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-12T15:57:02",
+    "phone": "+601172650262",
+    "bot": "@Receiverspacerobot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-12T15:57:32",
+    "phone": "+60198159646",
+    "bot": "@Receiverspacerobot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-12T16:00:00",
+    "phone": "+601136109535",
+    "bot": "@Receiverspacerobot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-12T16:00:39",
+    "phone": "+601129598464",
+    "bot": "@Receiverspacerobot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-12T16:00:39",
+    "phone": "+60126703915",
+    "bot": "@Receiverspacerobot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-12T16:00:39",
+    "phone": "+601171144324",
+    "bot": "@Receiverspacerobot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-12T16:00:42",
+    "phone": "+60109301089",
+    "bot": "@Receiverspacerobot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-12T16:01:03",
+    "phone": "+601112596818",
+    "bot": "@Receiverspacerobot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-12T16:11:21",
+    "phone": "-",
+    "bot": "@Receiverspacerobot",
+    "status": "failed",
+    "extra": "unauthorized_reply_mode"
+  },
+  {
+    "ts": "2026-06-12T16:11:42",
+    "phone": "+60173291635.session",
+    "bot": "@Receiverspacerobot",
+    "status": "failed",
+    "extra": "connect_timeout_reply"
+  },
+  {
+    "ts": "2026-06-12T16:12:00",
+    "phone": "+60197339769",
+    "bot": "@Receiverspacerobot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-12T16:12:02",
+    "phone": "+60146456125",
+    "bot": "@Receiverspacerobot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-12T16:13:54",
+    "phone": "+601125132745",
+    "bot": "@Receiverspacerobot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-12T16:15:10",
+    "phone": "+60143633210",
+    "bot": "@Receiverspacerobot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-12T16:18:07",
+    "phone": "+601137504850",
+    "bot": "@Receiverspacerobot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-12T16:20:13",
+    "phone": "+601128640952",
+    "bot": "@Receiverspacerobot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-12T20:32:34",
+    "phone": "+62895330046031",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "cancel_requested"
+  },
+  {
+    "ts": "2026-06-12T20:39:42",
+    "phone": "+6287756083099",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "unknown_state"
+  },
+  {
+    "ts": "2026-06-13T10:29:35",
+    "phone": "+6287850917839",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-13T10:29:46",
+    "phone": "+6285781049962",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-13T11:30:21",
+    "phone": "+6287850917839",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-13T11:30:30",
+    "phone": "+6285781049962",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-13T11:30:33",
+    "phone": "-",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "unauthorized"
+  },
+  {
+    "ts": "2026-06-13T11:30:41",
+    "phone": "+6285718791401",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-13T11:41:24",
+    "phone": "6285781050727.session",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "connect_timeout"
+  },
+  {
+    "ts": "2026-06-13T11:42:14",
+    "phone": "+6282210407721",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "unknown_state"
+  },
+  {
+    "ts": "2026-06-13T11:46:36",
+    "phone": "+6285641417303",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "unknown_state"
+  },
+  {
+    "ts": "2026-06-13T12:03:31",
+    "phone": "+6281274420458",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "unknown_state"
+  },
+  {
+    "ts": "2026-06-13T12:06:10",
+    "phone": "+6283840516608.session",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "connect_timeout"
+  },
+  {
+    "ts": "2026-06-13T12:20:49",
+    "phone": "+6283100601039",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "unknown_state"
+  },
+  {
+    "ts": "2026-06-13T21:32:03",
+    "phone": "+6282121171556",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-13T21:32:03",
+    "phone": "+6282121171556",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "contact_restriction_zero"
+  },
+  {
+    "ts": "2026-06-14T16:31:01",
+    "phone": "+6285859004809",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "unknown_state"
+  },
+  {
+    "ts": "2026-06-14T16:52:18",
+    "phone": "6283135535914.session",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "connect_timeout"
+  },
+  {
+    "ts": "2026-06-14T17:09:35",
+    "phone": "+6281615246704",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "conv_error: "
+  },
+  {
+    "ts": "2026-06-14T17:10:00",
+    "phone": "+6289509086989",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "no_enter_code"
+  },
+  {
+    "ts": "2026-06-14T17:11:51",
+    "phone": "+6281273548383",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "no_enter_code"
+  },
+  {
+    "ts": "2026-06-14T17:12:15",
+    "phone": "+6289520008864",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "conv_error: "
+  },
+  {
+    "ts": "2026-06-14T17:12:40",
+    "phone": "+6285177829229",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "conv_error: "
+  },
+  {
+    "ts": "2026-06-14T17:13:02",
+    "phone": "+6287763761827",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "conv_error: "
+  },
+  {
+    "ts": "2026-06-14T17:13:27",
+    "phone": "+6282278358003",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "conv_error: "
+  },
+  {
+    "ts": "2026-06-14T17:15:22",
+    "phone": "+6281412142457",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "buyer_error"
+  },
+  {
+    "ts": "2026-06-14T17:39:36",
+    "phone": "+6285859004809",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "unknown_state"
+  },
+  {
+    "ts": "2026-06-14T19:27:16",
+    "phone": "6281250051213.session",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "connect_timeout_reply"
+  },
+  {
+    "ts": "2026-06-14T19:27:54",
+    "phone": "+6281928718125",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-14T19:28:00",
+    "phone": "+6283183819118",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-14T19:28:22",
+    "phone": "+6282119245331",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-14T19:28:45",
+    "phone": "+628132072908",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-14T19:28:45",
+    "phone": "+628132072908",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "contact_restriction_zero_reply"
+  },
+  {
+    "ts": "2026-06-14T19:29:38",
+    "phone": "+6281214647879",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-14T19:30:21",
+    "phone": "+6285371365591",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-14T19:30:25",
+    "phone": "+6283829335239",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-14T19:30:50",
+    "phone": "+6285198592918",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-14T19:30:53",
+    "phone": "+6283162864477",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-14T19:30:56",
+    "phone": "+6283854033943",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-14T19:31:11",
+    "phone": "+6288224859270",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-14T19:31:33",
+    "phone": "+628813990131",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-14T19:31:42",
+    "phone": "+6282135220303",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-14T19:32:01",
+    "phone": "+62895329685636",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-14T19:32:08",
+    "phone": "+6289631032403",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-14T19:32:25",
+    "phone": "+6289685286761",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "late_rejected_recovered_bg"
+  },
+  {
+    "ts": "2026-06-14T19:33:40",
+    "phone": "+6282262668211",
+    "bot": "@PowerReceiver5Bot",
+    "status": "failed",
+    "extra": "no_otp_prompt_reply"
+  },
+  {
+    "ts": "2026-06-14T19:45:32",
+    "phone": "6285351300704.session",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "connect_timeout"
+  },
+  {
+    "ts": "2026-06-14T20:06:51",
+    "phone": "+6285778216918",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-14T20:06:51",
+    "phone": "+6285778216918",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "contact_restriction_zero"
+  },
+  {
+    "ts": "2026-06-14T20:38:35",
+    "phone": "62895428318887.session",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "connect_timeout"
+  },
+  {
+    "ts": "2026-06-14T21:21:31",
+    "phone": "+6287711485422",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "no_enter_code"
+  },
+  {
+    "ts": "2026-06-14T21:24:47",
+    "phone": "6283147443805.session",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "connect_timeout"
+  },
+  {
+    "ts": "2026-06-14T21:29:25",
+    "phone": "+6285271874801",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "no_enter_code"
+  },
+  {
+    "ts": "2026-06-14T21:31:40",
+    "phone": "+6285184318401",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "no_enter_code"
+  },
+  {
+    "ts": "2026-06-14T21:32:29",
+    "phone": "+6283850941360",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "buyer_error"
+  },
+  {
+    "ts": "2026-06-14T21:35:27",
+    "phone": "+6283160013114",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "no_enter_code"
+  },
+  {
+    "ts": "2026-06-14T21:37:42",
+    "phone": "+6287868197886",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "no_enter_code"
+  },
+  {
+    "ts": "2026-06-14T21:39:57",
+    "phone": "+6282144361016",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "no_enter_code"
+  },
+  {
+    "ts": "2026-06-14T21:40:18",
+    "phone": "+62895401493920",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "conv_error: "
+  },
+  {
+    "ts": "2026-06-14T21:42:31",
+    "phone": "+6282145809944",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "no_enter_code"
+  },
+  {
+    "ts": "2026-06-14T21:44:53",
+    "phone": "+6285775181912",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "no_enter_code"
+  },
+  {
+    "ts": "2026-06-15T01:33:59",
+    "phone": "+628132072908",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-15T01:33:59",
+    "phone": "+628132072908",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "contact_restriction_zero"
+  },
+  {
+    "ts": "2026-06-15T11:11:29",
+    "phone": "+62895384462311",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-15T11:14:06",
+    "phone": "+6281267682009",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-15T11:14:20",
+    "phone": "+6285879363322",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-15T11:14:28",
+    "phone": "+6282292232224",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-15T11:14:39",
+    "phone": "+62895395091624",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-15T11:14:49",
+    "phone": "+6285834010233",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-15T11:16:11",
+    "phone": "+6282276964541",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-15T11:16:22",
+    "phone": "+6285135002640",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-15T11:16:31",
+    "phone": "+6281234381447",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-15T11:16:41",
+    "phone": "+6285330016266",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-15T11:16:52",
+    "phone": "+6281232641091",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-15T11:17:42",
+    "phone": "+6282111800777",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-15T11:17:52",
+    "phone": "+6282241511897",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-15T11:18:39",
+    "phone": "+6287728417848",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-15T11:18:51",
+    "phone": "+628998817254",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-15T11:19:01",
+    "phone": "+6281396470354",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-15T11:21:46",
+    "phone": "+6283843343658",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-15T11:21:56",
+    "phone": "+62881011252681",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-15T11:22:40",
+    "phone": "+6281515569185",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-15T11:22:50",
+    "phone": "+6282220304768",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-15T11:23:01",
+    "phone": "+6289654730272",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-15T11:23:10",
+    "phone": "+6281361227316",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-15T11:23:26",
+    "phone": "+6282135303887",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-15T11:23:36",
+    "phone": "+6285779245746",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-15T11:25:49",
+    "phone": "+6281293595115",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-15T11:26:01",
+    "phone": "+6281220752297",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-15T11:27:46",
+    "phone": "+6281334808234",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-15T11:28:05",
+    "phone": "+6285363091524",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-15T11:28:44",
+    "phone": "+6289664129600",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-15T11:29:24",
+    "phone": "+6285321357110",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-15T11:31:09",
+    "phone": "+6282274095054",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-15T11:31:13",
+    "phone": "6285846622811.session",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "connect_timeout"
+  },
+  {
+    "ts": "2026-06-15T11:31:59",
+    "phone": "+6285722044649",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-15T11:32:09",
+    "phone": "+6282381979407",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-15T11:32:23",
+    "phone": "+6285273625459",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-15T11:32:33",
+    "phone": "+6281364789806",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-15T11:33:14",
+    "phone": "+6281949374342",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "precheck_failed"
+  },
+  {
+    "ts": "2026-06-15T14:16:21",
+    "phone": "-",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "unauthorized"
+  },
+  {
+    "ts": "2026-06-15T14:16:23",
+    "phone": "-",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "unauthorized"
+  },
+  {
+    "ts": "2026-06-15T14:16:27",
+    "phone": "-",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "unauthorized"
+  },
+  {
+    "ts": "2026-06-15T14:16:31",
+    "phone": "-",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "unauthorized"
+  },
+  {
+    "ts": "2026-06-15T14:16:34",
+    "phone": "-",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "unauthorized"
+  },
+  {
+    "ts": "2026-06-15T14:16:37",
+    "phone": "-",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "unauthorized"
+  },
+  {
+    "ts": "2026-06-15T14:16:40",
+    "phone": "-",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "unauthorized"
+  },
+  {
+    "ts": "2026-06-15T14:16:43",
+    "phone": "-",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "unauthorized"
+  },
+  {
+    "ts": "2026-06-15T14:16:46",
+    "phone": "-",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "unauthorized"
+  },
+  {
+    "ts": "2026-06-15T14:16:49",
+    "phone": "-",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "unauthorized"
+  },
+  {
+    "ts": "2026-06-15T14:16:52",
+    "phone": "-",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "unauthorized"
+  },
+  {
+    "ts": "2026-06-15T14:16:56",
+    "phone": "-",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "unauthorized"
+  },
+  {
+    "ts": "2026-06-15T21:16:08",
+    "phone": "6285738080725.session",
+    "bot": "@WORLD_FIRE_V5_BOT",
+    "status": "failed",
+    "extra": "connect_timeout"
+  },
+  {
+    "ts": "2026-06-16T10:48:47",
+    "phone": "+6281350098220.session",
+    "bot": "@EG_SALE_BOT",
+    "status": "failed",
+    "extra": "connect_timeout"
+  },
+  {
+    "ts": "2026-06-16T10:53:04",
+    "phone": "+6281947448628",
+    "bot": "@EG_SALE_BOT",
+    "status": "failed",
+    "extra": "buyer_error"
+  },
+  {
+    "ts": "2026-06-16T10:56:12",
+    "phone": "+6282142730817",
+    "bot": "-",
+    "status": "failed",
+    "extra": "contact_zero_unsolvable"
+  },
+  {
+    "ts": "2026-06-16T10:56:12",
+    "phone": "+6282142730817",
+    "bot": "@EG_SALE_BOT",
+    "status": "failed",
+    "extra": "contact_restriction_zero"
   }
 ]

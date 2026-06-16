@@ -3,7 +3,7 @@ import re
 import time
 from pathlib import Path
 from telethon import TelegramClient
-from config import SESSIONS_DIR, TWO_FA_ON_DIR, OTHER_DEVICE_DIR, UNAUTH_DIR, REJECTED_DIR
+from config import SESSIONS_DIR, TWO_FA_ON_DIR, OTHER_DEVICE_DIR, UNAUTH_DIR, REJECTED_DIR, RECOVERED_DIR, ALREADY_SOLD_DIR, CANCELLED_DIR
 
 PHONE_RE = re.compile(r"(\+?\d{6,20})")
 
@@ -68,6 +68,48 @@ def move_to_rejected(session_path: Path, retries: int = 3, delay: float = 1.0) -
                 time.sleep(delay)
             else:
                 print(f"⚠️ Gagal move ke REJECTED: {e}")
+    return None
+
+
+def move_to_recovered(session_path: Path, retries: int = 3, delay: float = 1.0) -> Path | None:
+    for i in range(retries):
+        try:
+            dest = _move_preserving_user(session_path, RECOVERED_DIR)
+            print(f"🔄 Dipindah ke RECOVERED: {session_path.name}")
+            return dest
+        except Exception as e:
+            if i < retries - 1:
+                time.sleep(delay)
+            else:
+                print(f"⚠️ Gagal move ke RECOVERED: {e}")
+    return None
+
+
+def move_to_already_sold(session_path: Path, retries: int = 3, delay: float = 1.0) -> Path | None:
+    for i in range(retries):
+        try:
+            dest = _move_preserving_user(session_path, ALREADY_SOLD_DIR)
+            print(f"🔁 Dipindah ke ALREADY_SOLD: {session_path.name}")
+            return dest
+        except Exception as e:
+            if i < retries - 1:
+                time.sleep(delay)
+            else:
+                print(f"⚠️ Gagal move ke ALREADY_SOLD: {e}")
+    return None
+
+
+def move_to_cancelled(session_path: Path, retries: int = 3, delay: float = 1.0) -> Path | None:
+    for i in range(retries):
+        try:
+            dest = _move_preserving_user(session_path, CANCELLED_DIR)
+            print(f"🚫 Dipindah ke CANCELLED: {session_path.name}")
+            return dest
+        except Exception as e:
+            if i < retries - 1:
+                time.sleep(delay)
+            else:
+                print(f"⚠️ Gagal move ke CANCELLED: {e}")
     return None
 
 

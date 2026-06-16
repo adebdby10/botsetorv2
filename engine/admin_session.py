@@ -1,21 +1,21 @@
 # engine/admin_session.py
-# Login & load admin sessions (untuk komunikasi dengan bot buyer)
+# Login & load userbot sessions (untuk komunikasi dengan bot buyer)
 
 import asyncio
 from pathlib import Path
 from telethon import TelegramClient
 from telethon.errors import SessionPasswordNeededError
-from config import ADMIN_DIR
+from config import USERBOT_DIR
 
 
-async def create_admin_session_interactive(
+async def create_userbot_session_interactive(
     api_id: int, api_hash: str, session_label: str, phone: str
 ):
     """
-    Buat session admin di ./ADMIN/<session_label>.session
+    Buat session userbot di ./USERBOT/<session_label>.session
     Login interaktif (input code/password di console).
     """
-    session_path = ADMIN_DIR / f"{session_label}.session"
+    session_path = USERBOT_DIR / f"{session_label}.session"
     client = TelegramClient(str(session_path), api_id, api_hash)
     await client.connect()
 
@@ -40,30 +40,30 @@ async def create_admin_session_interactive(
             return
 
     me = await client.get_me()
-    print(f"✅ Admin login: {me.id} ({me.username or me.first_name})")
+    print(f"✅ Userbot login: {me.id} ({me.username or me.first_name})")
     await client.disconnect()
 
 
-async def get_admin_clients(api_id: int, api_hash: str, session_files: list[str]):
+async def get_userbot_clients(api_id: int, api_hash: str, session_files: list[str]):
     """
-    Open multiple admin clients (return list of connected clients).
-    session_files: list nama file .session (di ./ADMIN).
+    Open multiple userbot clients (return list of connected clients).
+    session_files: list nama file .session (di ./USERBOT).
     """
     clients = []
     for name in session_files:
-        sp = ADMIN_DIR / name
+        sp = USERBOT_DIR / name
         if not sp.exists():
-            print(f"❌ Admin session tidak ditemukan: {name}")
+            print(f"❌ Userbot session tidak ditemukan: {name}")
             continue
         c = TelegramClient(str(sp), api_id, api_hash)
         try:
             await c.connect()
             if not await c.is_user_authorized():
-                print(f"❌ Admin session belum authorized: {name}")
+                print(f"❌ Userbot session belum authorized: {name}")
                 await c.disconnect()
                 continue
             clients.append(c)
-            print(f"✅ Admin siap: {name}")
+            print(f"✅ Userbot siap: {name}")
         except Exception as e:
-            print(f"❌ Gagal open admin {name}: {e}")
+            print(f"❌ Gagal open userbot {name}: {e}")
     return clients

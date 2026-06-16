@@ -4,14 +4,45 @@
 import asyncio
 import random  # buat delay tambahan floodwait & kirim pesan
 import re  # buat parse detik
+import zipfile
+import shutil
+from datetime import datetime
 from pathlib import Path
+
+# ─── Stop-aware wait helper ──────────────────────────────────────────────────
+# Raises CancelledError if stop_event is set while waiting, so callers can
+# abort promptly when user hits Stop.
+
+async def _wait_stop(stop_event: asyncio.Event | None, timeout: float):
+    """Sleep for `timeout` seconds, but return early if stop_event is set."""
+    if stop_event is None:
+        await asyncio.sleep(timeout)
+        return False
+    try:
+        await asyncio.wait_for(stop_event.wait(), timeout=timeout)
+        return True  # stop was requested
+    except asyncio.TimeoutError:
+        return False  # normal expiry
+
+
+class StoppedError(Exception):
+    """Raised when stop_event is set during a long-running operation."""
+    pass
+
+
+def _check_stop(stop_event: asyncio.Event | None):
+    """Raise StoppedError if stop_event is set."""
+    if stop_event and stop_event.is_set():
+        raise StoppedError()
 from telethon import TelegramClient, events
+from telethon.sessions import StringSession
 from telethon.errors import RPCError, FreshResetAuthorisationForbiddenError
 from telethon.tl.functions.account import (
     GetPasswordRequest,
     GetAuthorizationsRequest,
     ResetAuthorizationRequest,
 )
+from telethon.tl.functions.auth import LogOutRequest
 from telethon.tl.functions.contacts import GetContactsRequest, ImportContactsRequest
 from telethon.tl.types import InputPhoneContact
 
@@ -22,6 +53,9 @@ from utils.file_manager import (
     move_to_other_device,
     move_to_unauth,
     move_to_rejected,
+    move_to_recovered,
+    move_to_already_sold,
+    move_to_cancelled,
     parse_phone_from_filename,
 )
 from utils.logger import log_pending, log_success, log_failed, log_invalid_2fa
@@ -32,6 +66,11 @@ from config import (
     WARMUP_DELAY_MAX,
     TASK_STAGGER_MIN,
     TASK_STAGGER_MAX,
+    GRACE_PERIOD_SECONDS,
+    RECOVERED_DIR,
+    ALREADY_SOLD_DIR,
+    CANCELLED_DIR,
+    get_next_proxy,
 )
 
 OLD_PASS = "wsl2026wsl"
@@ -330,12 +369,25 @@ async def sell_one_session(
     session_path: Path,
     otp_timeout: int = 90,
     event_cb=None,
+    grace_tasks: list | None = None,
+    stop_event: asyncio.Event | None = None,
 ) -> bool:
 
-    selling_client = TelegramClient(str(session_path), api_id, api_hash)
+    _proxy = get_next_proxy()
+    selling_client = TelegramClient(StringSession(_make_string_session(session_path)), api_id, api_hash, proxy=_proxy)
     user_id = None
     try:
-        await selling_client.connect()
+        try:
+            await asyncio.wait_for(selling_client.connect(), timeout=30)
+        except asyncio.TimeoutError:
+            print(f"❌ Connection timeout untuk {session_path.name}")
+            log_failed(session_path.name, bot_username, "connect_timeout")
+            try:
+                await selling_client.disconnect()
+            except Exception:
+                pass
+            move_to_unauth(session_path)
+            return False
         if not await selling_client.is_user_authorized():
             print("❌ Session unauth, tidak bisa ambil nomor.")
             log_failed("-", bot_username, "unauthorized")
@@ -351,7 +403,9 @@ async def sell_one_session(
         # cepat dari server ini memicu deteksi Telegram dan mem-freeze akun.
         _warmup = random.uniform(WARMUP_DELAY_MIN, WARMUP_DELAY_MAX)
         print(f"⏳ Warmup [{session_path.name}]: jeda {_warmup:.1f}s sebelum mulai...")
-        await asyncio.sleep(_warmup)
+        if await _wait_stop(stop_event, _warmup):
+            print(f"🛑 Stop requested during warmup for {session_path.name}")
+            raise StoppedError()
 
         me = await selling_client.get_me()
         user_id = getattr(me, "id", None)
@@ -368,6 +422,7 @@ async def sell_one_session(
         return False
 
     log_pending(phone, bot_username, "started")
+    _check_stop(stop_event)
 
     admin_label = _get_admin_label(admin_client)
     print(f"✅ Session Admin dipakai: {admin_label}")
@@ -488,6 +543,7 @@ async def sell_one_session(
                         print(f"⚠️ Bot buyer balas error (awal): {event.raw_text}")
 
             try:
+                _check_stop(stop_event)
                 trigger = await asyncio.wait_for(otp_trigger, timeout=120)
             except asyncio.TimeoutError:
                 print("⚠️ Tidak ada update dari bot setelah Processing..")
@@ -535,6 +591,12 @@ async def sell_one_session(
                     f"♻️ Nomor {phone} sudah terdaftar di buyer, lanjut ke berikutnya."
                 )
                 log_success(phone, bot_username, "already_registered")
+                # Auto logout device bot
+                try:
+                    await selling_client(LogOutRequest())
+                    print(f"🔫 Auto logout (already_registered): {phone}")
+                except Exception as e:
+                    print(f"⚠️ Auto logout gagal {phone}: {e}")
                 try:
                     await selling_client.disconnect()
                 except Exception:
@@ -542,15 +604,16 @@ async def sell_one_session(
                 return True
 
             if trigger == "already_sold":
-                print(f"⏭ Nomor {phone} sudah pernah terjual, skip.")
+                print(f"⏭ Nomor {phone} sudah pernah terjual, simpan ke ALREADY_SOLD.")
                 log_failed(phone, bot_username, "already_sold")
+                move_to_already_sold(session_path)
                 if event_cb:
                     await event_cb("already_sold", phone)
                 try:
                     await selling_client.disconnect()
                 except Exception:
                     pass
-                return False
+                return "already_sold"
 
             if trigger == "error":
                 log_failed(phone, bot_username, "buyer_error")
@@ -566,6 +629,7 @@ async def sell_one_session(
                         f"⚡ OTP sudah ada sebelum buyer minta — langsung dipakai: {code}"
                     )
             if not code:
+                _check_stop(stop_event)
                 try:
                     code = await asyncio.wait_for(otp_future, timeout=30)
                 except asyncio.TimeoutError:
@@ -682,6 +746,7 @@ async def sell_one_session(
                 print("📩 OTP dikirim, tunggu respon dari bot (edit / new)...")
 
                 try:
+                    _check_stop(stop_event)
                     outcome = await asyncio.wait_for(result_future, timeout=180)
                 except asyncio.TimeoutError:
                     print("⚠️ Tidak ada update dari bot setelah OTP → unknown_state")
@@ -692,24 +757,28 @@ async def sell_one_session(
                 if outcome == "success":
                     print(f"🎉 Sukses jual (via handler): {phone}")
                     log_success(phone, bot_username, "sold")
-                    try:
-                        await selling_client.disconnect()
-                    except Exception:
-                        pass
+
+                    # JANGAN logout dulu — grace period monitor di background
+                    # selling_client tetap hidup selama 40s, lalu logout/recover
+                    _gt = asyncio.create_task(_grace_period_and_finalize(
+                        selling_client, admin_client, bot_username,
+                        phone, session_path, event_cb,
+                    ))
+                    if grace_tasks is not None:
+                        grace_tasks.append(_gt)
                     return True
 
                 elif outcome == "rejected":
-                    print(f"🚫 Account {phone} ditolak buyer (contact restriction), dikembalikan.")
+                    print(f"🚫 Account {phone} ditolak buyer (contact restriction), recovering...")
                     log_failed(phone, bot_username, "rejected_by_buyer")
                     if event_cb:
                         await event_cb("rejected", phone)
-                    try:
-                        await selling_client.disconnect()
-                    except Exception:
-                        pass
-                    await asyncio.sleep(2.0)
-                    move_to_rejected(session_path)
-                    return False
+                    recovered = await _recover_rejected_session(selling_client, phone, session_path)
+                    if not recovered:
+                        if event_cb:
+                            await event_cb("recover_failed", phone)
+                        return False
+                    return "recovered"
 
                 elif outcome == "frozen":
                     print(
@@ -828,6 +897,13 @@ async def sell_one_session(
         # propagate ke batch
         raise
 
+    except StoppedError:
+        print(f"🛑 sell_one_session stopped for {session_path.name}")
+        try:
+            await selling_client.disconnect()
+        except Exception:
+            pass
+        raise  # re-raise so caller knows it was stopped
     except Exception as e:
         print(f"❌ Error conv bot: {e}")
         log_failed(phone, bot_username, f"conv_error: {e}")
@@ -838,9 +914,246 @@ async def sell_one_session(
         return False
 
 
+def _make_string_session(session_path: Path) -> str:
+    """Load .session file → return StringSession string (in-memory, no file writes).
+    Always set port=443 for proxy compatibility."""
+    import sqlite3, os
+    from telethon.sessions import StringSession as _SS
+    from telethon.crypto import AuthKey
+    db = sqlite3.connect(str(session_path))
+    try:
+        row = db.execute("SELECT dc_id, server_address, port, auth_key FROM sessions LIMIT 1").fetchone()
+        if not row or not row[3]:
+            raise ValueError("No valid auth data")
+        dc_id, server_address, port, auth_key = row
+        ss = _SS()
+        ss._dc_id = dc_id
+        ss._server_address = server_address
+        ss._port = 443  # Force 443 for proxy compatibility
+        ss._auth_key = AuthKey(auth_key[:256])
+        return ss.save()
+    finally:
+        db.close()
+
+
 def _normalize_phone(s: str) -> str:
     """Ambil cuma digit, buang + dan karakter lain buat perbandingan."""
     return re.sub(r"\D", "", s or "")
+
+
+async def _grace_period_and_finalize(
+    selling_client: TelegramClient,
+    admin_client: TelegramClient,
+    bot_username: str,
+    phone: str,
+    session_path: Path,
+    event_cb=None,
+    grace_seconds: int = GRACE_PERIOD_SECONDS,
+):
+    """Grace period + auto-logout/recover, jalan di background.
+    selling_client TETAP HIDUP selama grace period.
+    - Kalau 40s tanpa reject → logout + disconnect
+    - Kalau ada reject → kill device buyer + simpan ke RECOVERED + disconnect
+    """
+    norm_phone = _normalize_phone(phone)
+    loop = asyncio.get_event_loop()
+    reject_future: asyncio.Future = loop.create_future()
+
+    @admin_client.on(events.NewMessage(chats=bot_username))
+    @admin_client.on(events.MessageEdited(chats=bot_username))
+    async def grace_watcher(event):
+        raw = event.raw_text or ""
+        if not _looks_rejected(raw):
+            return
+        m = NUMBER_IN_MSG_RE.search(raw)
+        if not m:
+            return
+        if _normalize_phone(m.group(1)) == norm_phone:
+            if not reject_future.done():
+                print(f"🚫 Late REJECT terdeteksi saat grace period: {phone}")
+                reject_future.set_result(True)
+
+    print(f"⏳ Grace period {grace_seconds}s (monitor) untuk {phone}...")
+    try:
+        late_rejected = await asyncio.wait_for(reject_future, timeout=grace_seconds)
+    except asyncio.TimeoutError:
+        late_rejected = False
+    finally:
+        try:
+            admin_client.remove_event_handler(grace_watcher, events.NewMessage)
+        except Exception:
+            pass
+        try:
+            admin_client.remove_event_handler(grace_watcher, events.MessageEdited)
+        except Exception:
+            pass
+
+    if late_rejected:
+        # Late reject → JANGAN logout, kill device buyer, simpan ke RECOVERED
+        print(f"🔄 Late reject dikonfirmasi untuk {phone}, recovering...")
+        recovered = await _recover_rejected_session(selling_client, phone, session_path)
+        if recovered:
+            log_failed(phone, bot_username, "late_rejected_recovered_bg")
+            if event_cb:
+                await event_cb("recovered", phone)
+        else:
+            log_failed(phone, bot_username, "late_rejected_recover_failed")
+            if event_cb:
+                await event_cb("recover_failed", phone)
+    else:
+        # Tidak ada reject → aman logout
+        try:
+            await selling_client(LogOutRequest())
+            print(f"🔫 Auto logout (grace selesai): {phone}")
+        except Exception as e:
+            print(f"⚠️ Auto logout gagal {phone}: {e}")
+
+    try:
+        await selling_client.disconnect()
+    except Exception:
+        pass
+
+
+async def _grace_period_watch(
+    selling_client: TelegramClient,
+    admin_client: TelegramClient,
+    bot_username: str,
+    phone: str,
+    session_path: Path,
+    grace_seconds: int = GRACE_PERIOD_SECONDS,
+) -> bool:
+    """
+    Setelah buyer bilang 'Successfully', tunggu grace period sebelum logout.
+    Monitor pesan buyer — kalau reject masuk dalam grace period, recover session.
+
+    Returns:
+        True  → late reject terdeteksi, session berhasil di-recover ke RECOVERED/
+        False → grace period habis tanpa reject, aman untuk logout
+    """
+    norm_phone = _normalize_phone(phone)
+    loop = asyncio.get_event_loop()
+    reject_future: asyncio.Future = loop.create_future()
+
+    @admin_client.on(events.NewMessage(chats=bot_username))
+    @admin_client.on(events.MessageEdited(chats=bot_username))
+    async def grace_reject_watcher(event):
+        raw = event.raw_text or ""
+        if not _looks_rejected(raw):
+            return
+        m = NUMBER_IN_MSG_RE.search(raw)
+        if not m:
+            return
+        if _normalize_phone(m.group(1)) == norm_phone:
+            if not reject_future.done():
+                print(f"🚫 Late REJECT terdeteksi saat grace period: {phone}")
+                reject_future.set_result(True)
+
+    print(f"⏳ Grace period {grace_seconds}s untuk {phone}...")
+    try:
+        late_rejected = await asyncio.wait_for(reject_future, timeout=grace_seconds)
+    except asyncio.TimeoutError:
+        late_rejected = False
+    finally:
+        try:
+            admin_client.remove_event_handler(grace_reject_watcher, events.NewMessage)
+        except Exception:
+            pass
+        try:
+            admin_client.remove_event_handler(grace_reject_watcher, events.MessageEdited)
+        except Exception:
+            pass
+
+    if late_rejected:
+        print(f"🔄 Late reject dikonfirmasi untuk {phone}, recovering...")
+        recovered = await _recover_rejected_session(selling_client, phone, session_path)
+        return recovered
+    else:
+        print(f"✅ Grace period selesai, tidak ada reject untuk {phone} → aman logout.")
+        return False
+
+
+
+async def _recover_rejected_session(
+    selling_client: TelegramClient,
+    phone: str,
+    session_path: Path,
+) -> bool:
+    """
+    Recover session yang di-reject buyer:
+    1. Delay 10s (tunggu proses rejection di sisi buyer selesai)
+    2. terminate_other_devices() → kill session buyer
+    3. Verifikasi session kita masih valid (get_me())
+    4. Disconnect selling_client
+    5. Simpan session ke RECOVERED/ (valid) atau REJECTED/ (unauth)
+
+    Returns:
+        True  → berhasil recover (session masih valid)
+        False → gagal recover (session unauth → REJECTED/)
+    """
+    print(f"⏳ [{phone}] Delay 10s sebelum kill device buyer (tunggu buyer selesai proses rejection)...")
+    await asyncio.sleep(10)
+
+    try:
+        result = await terminate_other_devices(selling_client, phone)
+        if result == "error":
+            print(f"❌ [{phone}] Gagal kill device buyer, session tidak bisa di-recover.")
+            try:
+                await selling_client.disconnect()
+            except Exception:
+                pass
+            move_to_rejected(session_path)
+            return False
+
+        print(f"✅ [{phone}] Device buyer berhasil di-kill. Verifikasi session...")
+
+        # ── Verifikasi session masih valid setelah kill device buyer ──
+        try:
+            me = await asyncio.wait_for(selling_client.get_me(), timeout=15)
+            if me is None:
+                print(f"❌ [{phone}] get_me() return None → session unauth.")
+                try:
+                    await selling_client.disconnect()
+                except Exception:
+                    pass
+                move_to_unauth(session_path)
+                return False
+            print(f"✅ [{phone}] Session VALID — user_id={me.id}, phone=+{me.phone}")
+        except asyncio.TimeoutError:
+            print(f"⚠️ [{phone}] get_me() timeout — session kemungkinan unauth.")
+            try:
+                await selling_client.disconnect()
+            except Exception:
+                pass
+            move_to_unauth(session_path)
+            return False
+        except Exception as e:
+            err = str(e).lower()
+            if "unauthorized" in err or "auth" in err:
+                print(f"❌ [{phone}] Session UNAUTH setelah kill device buyer: {e}")
+                try:
+                    await selling_client.disconnect()
+                except Exception:
+                    pass
+                move_to_unauth(session_path)
+                return False
+            # Error lain (network etc) — tetap anggap recovered, biar bisa dicek manual
+            print(f"⚠️ [{phone}] get_me() error (bukan unauth): {e} — tetap simpan ke RECOVERED.")
+
+        try:
+            await selling_client.disconnect()
+        except Exception:
+            pass
+        move_to_recovered(session_path)
+        return True
+
+    except Exception as e:
+        print(f"❌ [{phone}] Error saat recover: {e}")
+        try:
+            await selling_client.disconnect()
+        except Exception:
+            pass
+        move_to_rejected(session_path)
+        return False
 
 
 async def sell_one_session_reply_mode(
@@ -851,6 +1164,8 @@ async def sell_one_session_reply_mode(
     session_path: Path,
     otp_timeout: int = 90,
     event_cb=None,
+    grace_tasks: list | None = None,
+    stop_event: asyncio.Event | None = None,
 ) -> bool:
     """
     Mode buyer yg formatnya:
@@ -861,11 +1176,22 @@ async def sell_one_session_reply_mode(
        '✅ Successfully\n📱 Number: +62...\n...'
     """
 
-    selling_client = TelegramClient(str(session_path), api_id, api_hash)
+    _proxy = get_next_proxy()
+    selling_client = TelegramClient(StringSession(_make_string_session(session_path)), api_id, api_hash, proxy=_proxy)
     user_id = None
     try:
         # connect & auth
-        await selling_client.connect()
+        try:
+            await asyncio.wait_for(selling_client.connect(), timeout=30)
+        except asyncio.TimeoutError:
+            print(f"❌ [REPLY] Connection timeout untuk {session_path.name}")
+            log_failed(session_path.name, bot_username, "connect_timeout_reply")
+            try:
+                await selling_client.disconnect()
+            except Exception:
+                pass
+            move_to_unauth(session_path)
+            return False
         if not await selling_client.is_user_authorized():
             print("❌ Session unauth, tidak bisa ambil nomor (reply-mode).")
             log_failed("-", bot_username, "unauthorized_reply_mode")
@@ -880,7 +1206,9 @@ async def sell_one_session_reply_mode(
         # sebelum API call pertama untuk menghindari freeze akibat rapid-action.
         _warmup = random.uniform(WARMUP_DELAY_MIN, WARMUP_DELAY_MAX)
         print(f"⏳ [REPLY] Warmup [{session_path.name}]: jeda {_warmup:.1f}s sebelum mulai...")
-        await asyncio.sleep(_warmup)
+        if await _wait_stop(stop_event, _warmup):
+            print(f"🛑 Stop requested during warmup for {session_path.name}")
+            raise StoppedError()
 
         me = await selling_client.get_me()
         user_id = getattr(me, "id", None)
@@ -898,6 +1226,7 @@ async def sell_one_session_reply_mode(
 
     norm_phone = _normalize_phone(phone)
     log_pending(phone, bot_username, "started_reply_mode")
+    _check_stop(stop_event)
 
     admin_label = _get_admin_label(admin_client)
     print(f"✅ Session Admin dipakai (reply-mode): {admin_label}")
@@ -951,6 +1280,17 @@ async def sell_one_session_reply_mode(
         if m2:
             target_num = _normalize_phone(m2.group(1))
             if target_num == norm_phone:
+                # capacity full check
+                if "capacity" in txt.lower() and "full" in txt.lower():
+                    print(f"⛔ [REPLY_MODE] Capacity full detected")
+                    if not result_future.done():
+                        result_future.set_result("capacity_full")
+                    return
+                # already sold check
+                if "already been sold" in txt:
+                    print(f"⏭ [REPLY_MODE] Already sold detected untuk {phone}")
+                    result_future.set_result("already_sold")
+                    return
                 # rejection check sebelum success
                 if _looks_rejected(raw):
                     print(f"🚫 [REPLY_MODE] Rejection detected untuk {phone}")
@@ -969,7 +1309,7 @@ async def sell_one_session_reply_mode(
 
     try:
         # 1) kirim nomor ke buyer (no conversation)
-        delay = random.uniform(1.0, 5.0)
+        delay = random.uniform(0.5, 1.5)
         print(f"⏳ [REPLY] Delay {delay:.1f}s sebelum kirim nomor: {phone}")
         await asyncio.sleep(delay)
         await admin_client.send_message(bot_username, phone)
@@ -984,6 +1324,7 @@ async def sell_one_session_reply_mode(
 
         # 3) tunggu OTP prompt '📨 OTP to +62... Reply to this message'
         try:
+            _check_stop(stop_event)
             otp_prompt_msg = await asyncio.wait_for(otp_prompt_future, timeout=120)
         except asyncio.TimeoutError:
             print(
@@ -1003,6 +1344,7 @@ async def sell_one_session_reply_mode(
                     f"⚡ [REPLY] OTP sudah ada sebelum diminta — langsung dipakai: {code}"
                 )
         if not code:
+            _check_stop(stop_event)
             try:
                 code = await asyncio.wait_for(otp_future, timeout=30)
             except asyncio.TimeoutError:
@@ -1033,6 +1375,7 @@ async def sell_one_session_reply_mode(
 
         # 6) tunggu hasil sukses / error
         try:
+            _check_stop(stop_event)
             outcome = await asyncio.wait_for(result_future, timeout=180)
         except asyncio.TimeoutError:
             print("⚠️ [REPLY] Tidak ada update hasil setelah OTP → unknown_state")
@@ -1043,24 +1386,45 @@ async def sell_one_session_reply_mode(
         if outcome == "success":
             print(f"🎉 [REPLY] Sukses jual (reply-mode): {phone}")
             log_success(phone, bot_username, "sold_reply_mode")
-            try:
-                await selling_client.disconnect()
-            except Exception:
-                pass
+
+            # JANGAN logout dulu — grace period monitor di background
+            _gt = asyncio.create_task(_grace_period_and_finalize(
+                selling_client, admin_client, bot_username,
+                phone, session_path, event_cb,
+            ))
+            if grace_tasks is not None:
+                grace_tasks.append(_gt)
             return True
 
         elif outcome == "rejected":
-            print(f"🚫 [REPLY] Account {phone} ditolak buyer, dikembalikan.")
+            print(f"🚫 [REPLY] Account {phone} ditolak buyer, recovering...")
             log_failed(phone, bot_username, "rejected_by_buyer_reply")
             if event_cb:
                 await event_cb("rejected", phone)
+            recovered = await _recover_rejected_session(selling_client, phone, session_path)
+            if not recovered:
+                if event_cb:
+                    await event_cb("recover_failed", phone)
+                return False
+            return "recovered"
+
+        elif outcome == "capacity_full":
+            print(f"⛔ [REPLY] Buyer capacity FULL untuk {bot_username}.")
+            log_failed(phone, bot_username, "capacity_full_reply")
             try:
                 await selling_client.disconnect()
             except Exception:
                 pass
-            await asyncio.sleep(2.0)
-            move_to_rejected(session_path)
-            return False
+            raise CapacityFullError("Buyer capacity for this country is full.")
+
+        elif outcome == "already_sold":
+            print(f"⏭ [REPLY] Nomor {phone} sudah pernah terjual, simpan ke ALREADY_SOLD.")
+            log_failed(phone, bot_username, "already_sold_reply")
+            move_to_already_sold(session_path)
+            if event_cb:
+                await event_cb("already_sold", phone)
+            await selling_client.disconnect()
+            return "already_sold"
 
         else:
             print(f"❌ [REPLY] Buyer error setelah OTP (reply-mode) untuk {phone}")
@@ -1083,6 +1447,85 @@ async def sell_one_session_reply_mode(
             print(f"⚠️ Gagal remove reply_mode_handler MessageEdited: {e}")
 
 
+def _zip_recovered_sessions() -> Path | None:
+    """Zip semua session di RECOVERED/ dan return path zip-nya. Hapus file setelah zip."""
+    recovered_files = list(RECOVERED_DIR.rglob("*.session"))
+    if not recovered_files:
+        return None
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    zip_path = RECOVERED_DIR.parent / f"RECOVERED_{timestamp}.zip"
+    with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as zf:
+        for f in recovered_files:
+            zf.write(f, f.name)
+    print(f"📦 Zipped {len(recovered_files)} session ke {zip_path.name}")
+    # Bersihkan file session setelah zip
+    for f in recovered_files:
+        try:
+            f.unlink(missing_ok=True)
+        except Exception:
+            pass
+    # Bersihin subfolder kosong
+    for sub in sorted(RECOVERED_DIR.rglob("*"), reverse=True):
+        if sub.is_dir():
+            try:
+                sub.rmdir()  # hanya hapus kalau kosong
+            except Exception:
+                pass
+    return zip_path
+
+
+def _zip_already_sold_sessions() -> Path | None:
+    """Zip semua session di ALREADY_SOLD/ dan return path zip-nya. Hapus file setelah zip."""
+    already_sold_files = list(ALREADY_SOLD_DIR.rglob("*.session"))
+    if not already_sold_files:
+        return None
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    zip_path = ALREADY_SOLD_DIR.parent / f"ALREADY_SOLD_{timestamp}.zip"
+    with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as zf:
+        for f in already_sold_files:
+            zf.write(f, f.name)
+    print(f"📦 Zipped {len(already_sold_files)} session ke {zip_path.name}")
+    # Bersihkan file session setelah zip
+    for f in already_sold_files:
+        try:
+            f.unlink(missing_ok=True)
+        except Exception:
+            pass
+    # Bersihin subfolder kosong
+    for sub in sorted(ALREADY_SOLD_DIR.rglob("*"), reverse=True):
+        if sub.is_dir():
+            try:
+                sub.rmdir()  # hanya hapus kalau kosong
+            except Exception:
+                pass
+    return zip_path
+
+
+def _zip_cancelled_sessions() -> Path | None:
+    """Zip semua session di CANCELLED/ dan return path zip-nya. Hapus file setelah zip."""
+    cancelled_files = list(CANCELLED_DIR.rglob("*.session"))
+    if not cancelled_files:
+        return None
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    zip_path = CANCELLED_DIR.parent / f"CANCELLED_{timestamp}.zip"
+    with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as zf:
+        for f in cancelled_files:
+            zf.write(f, f.name)
+    print(f"📦 Zipped {len(cancelled_files)} session ke {zip_path.name}")
+    for f in cancelled_files:
+        try:
+            f.unlink(missing_ok=True)
+        except Exception:
+            pass
+    for sub in sorted(CANCELLED_DIR.rglob("*"), reverse=True):
+        if sub.is_dir():
+            try:
+                sub.rmdir()
+            except Exception:
+                pass
+    return zip_path
+
+
 async def sell_sessions_with_bot(
     api_id: int,
     api_hash: str,
@@ -1091,35 +1534,27 @@ async def sell_sessions_with_bot(
     session_files: list[Path],
     progress_cb=None,
     event_cb=None,
+    stop_event: asyncio.Event | None = None,
 ):
     ok, fail = 0, 0
     total = len(session_files)
-    pending_success: dict[str, Path] = {}
-    late_rejected: list[tuple[str, Path]] = []
-
-    @admin_client.on(events.NewMessage(chats=bot_username))
-    @admin_client.on(events.MessageEdited(chats=bot_username))
-    async def global_late_watcher(evt):
-        raw = evt.raw_text or ""
-        if not _looks_rejected(raw):
-            return
-        m = NUMBER_IN_MSG_RE.search(raw)
-        if not m:
-            return
-        norm = _normalize_phone(m.group(1))
-        for p, path in list(pending_success.items()):
-            if _normalize_phone(p) == norm:
-                del pending_success[p]
-                late_rejected.append((p, path))
-                move_to_rejected(path)
-                if event_cb:
-                    await event_cb("late_rejected", p)
-                break
+    recovered_count = 0
+    already_sold_count = 0
+    cancelled_count = 0
+    grace_tasks: list[asyncio.Task] = []
+    success_paths: list[Path] = []  # Jangan hapus dulu, tunggu grace period selesai
 
     try:
         for sp in session_files:
+            # Stop check
+            if stop_event and stop_event.is_set():
+                print(f"🛑 Stop requested. Moving remaining sessions to CANCELLED.")
+                for remaining_sp in session_files[session_files.index(sp):]:
+                    move_to_cancelled(remaining_sp)
+                    cancelled_count += 1
+                break
+
             phone_fallback = parse_phone_from_filename(sp.name) or sp.stem
-            # Capture phone aktual dari me.phone (via phone_sent event) agar key session_msgs konsisten
             _resolved = [None]
             if event_cb:
                 async def _tracked(event_type, phone, extra="", _r=_resolved):
@@ -1139,7 +1574,15 @@ async def sell_sessions_with_bot(
                     session_path=sp,
                     otp_timeout=90,
                     event_cb=_cb,
+                    grace_tasks=grace_tasks,
+                    stop_event=stop_event,
                 )
+            except StoppedError:
+                print(f"🛑 Stopped during session {sp.name}, cancelling remaining.")
+                for remaining_sp in session_files[session_files.index(sp):]:
+                    move_to_cancelled(remaining_sp)
+                    cancelled_count += 1
+                break
             except CapacityFullError:
                 print(
                     f"\n⛔ Buyer capacity FULL untuk {bot_username}. "
@@ -1148,53 +1591,58 @@ async def sell_sessions_with_bot(
                 break
 
             actual_phone = _resolved[0] or phone_fallback
-            if res:
+            if res is True:
                 ok += 1
                 if event_cb:
                     await event_cb("success", actual_phone)
-                pending_success[actual_phone] = sp
+                # JANGAN hapus dulu — tunggu grace period selesai
+                # Kalau late reject masuk, file perlu di-recover
+                success_paths.append(sp)
+            elif res == "recovered":
+                recovered_count += 1
+                if event_cb:
+                    await event_cb("recovered", actual_phone)
+            elif res == "already_sold":
+                already_sold_count += 1
+                if event_cb:
+                    await event_cb("already_sold", actual_phone)
             else:
                 fail += 1
                 if event_cb:
                     await event_cb("fail", actual_phone)
             if progress_cb:
-                await progress_cb(ok, fail, total, sp.name)
-            await asyncio.sleep(1)
+                await progress_cb(ok + recovered_count, fail, total, sp.name)
 
-        # Notifikasi ke user: menunggu window rejection
         if event_cb:
             await event_cb("batch_done", "")
 
-        # Tunggu hingga 60 detik untuk late rejection setelah batch selesai
-        if pending_success:
-            deadline = asyncio.get_event_loop().time() + 10
-            while pending_success and asyncio.get_event_loop().time() < deadline:
-                await asyncio.sleep(5)
+    except Exception as e:
+        print(f"❌ Error batch: {e}")
 
-        # Hapus file yang tidak di-reject (late-rejected sudah dipindahkan di watcher)
-        for _p, path in list(pending_success.items()):
+    # ── Tunggu semua grace period selesai SEBELUM disconnect ──
+    if grace_tasks:
+        print(f"⏳ Menunggu {len(grace_tasks)} grace period task selesai...")
+        await asyncio.gather(*grace_tasks, return_exceptions=True)
+        print("✅ Semua grace period task selesai.")
+
+    # Hapus session file yang berhasil terjual DAN tidak di-recover saat grace period
+    for sp in success_paths:
+        if sp.exists():
             try:
-                path.unlink(missing_ok=True)
+                sp.unlink(missing_ok=True)
             except Exception:
                 pass
 
-        # Fallback: retry move untuk late-rejected yang gagal saat watcher (file lock Windows)
-        for _p, path in late_rejected:
-            if path.exists():
-                move_to_rejected(path)
+    # Recount recovered dari filesystem (grace period mungkin menambah file)
+    if RECOVERED_DIR.exists():
+        actual_recovered = len(list(RECOVERED_DIR.rglob("*.session")))
+        late_rejected = actual_recovered - recovered_count
+        if late_rejected > 0:
+            ok -= late_rejected
+            recovered_count = actual_recovered
+            print(f"🔄 Late rejection: {late_rejected} session berhasil di-recover saat grace period")
 
-    finally:
-        try:
-            admin_client.remove_event_handler(global_late_watcher, events.NewMessage)
-        except Exception:
-            pass
-        try:
-            admin_client.remove_event_handler(global_late_watcher, events.MessageEdited)
-        except Exception:
-            pass
-
-    real_ok = ok - len(late_rejected)
-    print(f"\n✅ Selesai. OK: {real_ok} | Late-rejected: {len(late_rejected)} | ❌ Fail: {fail}")
+    print(f"\n✅ Selesai. Terjual: {ok} | 🔄 Recovered: {recovered_count} | ❌ Fail: {fail}")
 
     try:
         await admin_client.disconnect()
@@ -1202,7 +1650,7 @@ async def sell_sessions_with_bot(
     except Exception as e:
         print(f"⚠️ Gagal disconnect admin client: {e}")
 
-    return {"success": real_ok}
+    return {"success": ok, "recovered": recovered_count, "already_sold": already_sold_count, "cancelled": cancelled_count, "fail": fail}
 
 
 async def sell_sessions_with_reply_bot(
@@ -1214,39 +1662,23 @@ async def sell_sessions_with_reply_bot(
     max_parallel: int = 10,
     progress_cb=None,
     event_cb=None,
+    stop_event: asyncio.Event | None = None,
 ):
     """
     Batch jual pakai buyer reply-mode.
     - max_parallel: berapa session yg dikerjain bareng (dari config.py mis. 10)
     """
-    ok, fail = 0, 0
+    ok, fail, recovered_count, already_sold_count, cancelled_count = 0, 0, 0, 0, 0
     total = len(session_files)
     sem = asyncio.Semaphore(max_parallel)
-    pending_success: dict[str, Path] = {}
-    late_rejected: list[tuple[str, Path]] = []
+    grace_tasks: list[asyncio.Task] = []
+    success_paths: list[Path] = []  # Jangan hapus dulu, tunggu grace period selesai
 
-    @admin_client.on(events.NewMessage(chats=bot_username))
-    @admin_client.on(events.MessageEdited(chats=bot_username))
-    async def global_late_watcher_r(evt):
-        raw = evt.raw_text or ""
-        if not _looks_rejected(raw):
-            return
-        m = NUMBER_IN_MSG_RE.search(raw)
-        if not m:
-            return
-        norm = _normalize_phone(m.group(1))
-        for p, path in list(pending_success.items()):
-            if _normalize_phone(p) == norm:
-                del pending_success[p]
-                late_rejected.append((p, path))
-                move_to_rejected(path)
-                if event_cb:
-                    await event_cb("late_rejected", p)
-                break
+    capacity_full = False
 
     try:
         async def worker(sp: Path):
-            nonlocal ok, fail
+            nonlocal ok, fail, recovered_count, capacity_full
             phone_fallback = parse_phone_from_filename(sp.name) or sp.stem
             _resolved = [None]
             if event_cb:
@@ -1259,7 +1691,10 @@ async def sell_sessions_with_reply_bot(
                 _cb = None
 
             async with sem:
-                res = await sell_one_session_reply_mode(
+                if capacity_full:
+                    return  # Skip jika capacity full
+                try:
+                    res = await sell_one_session_reply_mode(
                     api_id=api_id,
                     api_hash=api_hash,
                     admin_client=admin_client,
@@ -1267,66 +1702,105 @@ async def sell_sessions_with_reply_bot(
                     session_path=sp,
                     otp_timeout=90,
                     event_cb=_cb,
+                    grace_tasks=grace_tasks,
+                    stop_event=stop_event,
                 )
+                except StoppedError:
+                    print(f"🛑 [REPLY] Stopped during session {sp.name}")
+                    move_to_cancelled(sp)
+                    return
+                except CapacityFullError:
+                    print(f"⛔ [REPLY] Capacity full! Stop batch.")
+                    capacity_full = True
+                    move_to_cancelled(sp)
+                    return
+
                 actual_phone = _resolved[0] or phone_fallback
-                if res:
+                if res is True:
                     ok += 1
                     if event_cb:
                         await event_cb("success", actual_phone)
-                    pending_success[actual_phone] = sp
+                    # JANGAN hapus dulu — tunggu grace period selesai
+                    success_paths.append(sp)
+                elif res == "recovered":
+                    recovered_count += 1
+                    if event_cb:
+                        await event_cb("recovered", actual_phone)
+                elif res == "already_sold":
+                    already_sold_count += 1
+                    if event_cb:
+                        await event_cb("already_sold", actual_phone)
                 else:
                     fail += 1
                     if event_cb:
                         await event_cb("fail", actual_phone)
                 if progress_cb:
-                    await progress_cb(ok, fail, total, sp.name)
+                    await progress_cb(ok + recovered_count, fail, total, sp.name)
 
-        # Stagger: launch task satu per satu dengan jeda, agar koneksi selling_client
-        # tidak semua terjadi bersamaan dari IP yang sama (mencegah freeze massal).
+        # Stagger: launch task satu per satu dengan jeda
         tasks = []
         for i, sp in enumerate(session_files):
+            # Capacity full check
+            if capacity_full:
+                print(f"⛔ [REPLY] Capacity full, cancelling {len(session_files) - i} remaining sessions.")
+                for remaining_sp in session_files[i:]:
+                    move_to_cancelled(remaining_sp)
+                    cancelled_count += 1
+                break
+
+            # Stop check
+            if stop_event and stop_event.is_set():
+                print(f"🛑 [REPLY] Stop requested. Cancelling remaining sessions.")
+                for remaining_sp in session_files[i:]:
+                    move_to_cancelled(remaining_sp)
+                    cancelled_count += 1
+                break
+
             tasks.append(asyncio.create_task(worker(sp)))
             if i < len(session_files) - 1:
                 stagger = random.uniform(TASK_STAGGER_MIN, TASK_STAGGER_MAX)
                 print(f"⏳ Stagger: jeda {stagger:.1f}s sebelum launch task berikutnya...")
-                await asyncio.sleep(stagger)
+                if await _wait_stop(stop_event, stagger):
+                    print(f"🛑 [REPLY] Stop requested during stagger.")
+                    for remaining_sp in session_files[i+1:]:
+                        move_to_cancelled(remaining_sp)
+                        cancelled_count += 1
+                    break
 
-        await asyncio.gather(*tasks)
+        # Wait for launched tasks
+        if tasks:
+            await asyncio.gather(*tasks, return_exceptions=True)
 
-        # Notifikasi ke user: menunggu window rejection
         if event_cb:
             await event_cb("batch_done", "")
 
-        # Tunggu hingga 60 detik untuk late rejection setelah semua session selesai
-        if pending_success:
-            deadline = asyncio.get_event_loop().time() + 10
-            while pending_success and asyncio.get_event_loop().time() < deadline:
-                await asyncio.sleep(5)
+    except Exception as e:
+        print(f"❌ Error batch reply: {e}")
 
-        # Hapus file yang tidak di-reject (late-rejected sudah dipindahkan di watcher)
-        for _p, path in list(pending_success.items()):
+    # ── Tunggu semua grace period selesai SEBELUM disconnect ──
+    if grace_tasks:
+        print(f"⏳ [REPLY] Menunggu {len(grace_tasks)} grace period task selesai...")
+        await asyncio.gather(*grace_tasks, return_exceptions=True)
+        print("✅ [REPLY] Semua grace period task selesai.")
+
+    # Hapus session file yang berhasil terjual DAN tidak di-recover saat grace period
+    for sp in success_paths:
+        if sp.exists():
             try:
-                path.unlink(missing_ok=True)
+                sp.unlink(missing_ok=True)
             except Exception:
                 pass
 
-        # Fallback: retry move untuk late-rejected yang gagal saat watcher (file lock Windows)
-        for _p, path in late_rejected:
-            if path.exists():
-                move_to_rejected(path)
+    # Recount recovered dari filesystem (grace period mungkin menambah file)
+    if RECOVERED_DIR.exists():
+        actual_recovered = len(list(RECOVERED_DIR.rglob("*.session")))
+        late_rejected = actual_recovered - recovered_count
+        if late_rejected > 0:
+            ok -= late_rejected
+            recovered_count = actual_recovered
+            print(f"🔄 [REPLY] Late rejection: {late_rejected} session berhasil di-recover saat grace period")
 
-    finally:
-        try:
-            admin_client.remove_event_handler(global_late_watcher_r, events.NewMessage)
-        except Exception:
-            pass
-        try:
-            admin_client.remove_event_handler(global_late_watcher_r, events.MessageEdited)
-        except Exception:
-            pass
-
-    real_ok = ok - len(late_rejected)
-    print(f"\n✅ [REPLY] Batch selesai. OK: {real_ok} | Late-rejected: {len(late_rejected)} | ❌ Fail: {fail}")
+    print(f"\n✅ [REPLY] Batch selesai. Terjual: {ok} | 🔄 Recovered: {recovered_count} | ❌ Fail: {fail}")
 
     try:
         await admin_client.disconnect()
@@ -1334,4 +1808,4 @@ async def sell_sessions_with_reply_bot(
     except Exception as e:
         print(f"⚠️ [REPLY] Gagal disconnect admin client: {e}")
 
-    return {"success": real_ok}
+    return {"success": ok, "recovered": recovered_count, "already_sold": already_sold_count, "cancelled": cancelled_count, "fail": fail}

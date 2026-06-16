@@ -8,13 +8,22 @@ API_HASH = "03ee5a4be9848535eb9aace996f5202d"
 
 # Directories
 ROOT = Path(__file__).parent.resolve()
-ADMIN_DIR        = ROOT / "ADMIN"
+USERBOT_DIR      = ROOT / "USERBOT"
 SESSIONS_DIR     = ROOT / "SESSIONS"
 SOLD_DIR         = ROOT / "SOLD"
 TWO_FA_ON_DIR    = ROOT / "2FA_ON"
 OTHER_DEVICE_DIR = ROOT / "OTHER_DEVICE"
 UNAUTH_DIR       = ROOT / "UNAUTH"
 REJECTED_DIR     = ROOT / "REJECTED"
+RECOVERED_DIR    = ROOT / "RECOVERED"
+ALREADY_SOLD_DIR = ROOT / "ALREADY_SOLD"
+CANCELLED_DIR    = ROOT / "CANCELLED"
+ARCHIVE_DIR      = ROOT / "ARCHIVE"
+
+# Grace period setelah buyer bilang "Successfully" sebelum logout.
+# Buyer kadang kirim reject belakangan (late rejection).
+# 60 detik cukup untuk deteksi late reject.
+GRACE_PERIOD_SECONDS = 40
 
 # Default bot buyers (receiver mode / flow biasa)
 BOT_BUYERS = [
@@ -58,14 +67,54 @@ ALLOWED_USERS: list[int] = []
 # Anti-freeze: perlindungan agar session tidak di-freeze Telegram
 # Alasan: session dibuat di satu IP/device, lalu langsung dieksekusi dari
 # IP/device server yang berbeda → Telegram deteksi rapid-action → freeze.
-WARMUP_DELAY_MIN  = 4    # detik min jeda setelah connect, sebelum API call pertama
-WARMUP_DELAY_MAX  = 10   # detik max
-TASK_STAGGER_MIN  = 2    # detik min jeda antar launch task di reply mode
-TASK_STAGGER_MAX  = 5    # detik max
+WARMUP_DELAY_MIN  = 2    # detik min jeda setelah connect, sebelum API call pertama
+WARMUP_DELAY_MAX  = 5   # detik max
+TASK_STAGGER_MIN  = 1    # detik min jeda antar launch task di reply mode
+TASK_STAGGER_MAX  = 3    # detik max
+
+# ── Proxy ──────────────────────────────────────────
+PROXY_FILE = ROOT / "proxies.txt"
+_proxy_list: list[tuple] | None = None
+_proxy_index = 0
+
+
+def load_proxies() -> list[tuple]:
+    """Load proxies.txt → list of (host, port, user, pass)."""
+    global _proxy_list
+    if _proxy_list is not None:
+        return _proxy_list
+    _proxy_list = []
+    if not PROXY_FILE.exists():
+        return _proxy_list
+    for line in PROXY_FILE.read_text().strip().splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        try:
+            creds, host_port = line.split("@")
+            user, pwd = creds.split(":")
+            host, port = host_port.split(":")
+            _proxy_list.append((host, int(port), user, pwd))
+        except Exception:
+            pass
+    print(f"🌐 Loaded {len(_proxy_list)} proxies")
+    return _proxy_list
+
+
+def get_next_proxy():
+    """Round-robin proxy selection. Returns Telethon-compatible proxy tuple."""
+    global _proxy_index
+    proxies = load_proxies()
+    if not proxies:
+        return None
+    host, port, user, pwd = proxies[_proxy_index % len(proxies)]
+    _proxy_index += 1
+    # Telethon format: (type_str, host, port, rdns, username, password)
+    return ('socks5', host, port, True, user, pwd)
 
 
 def ensure_dirs():
-    for d in [ADMIN_DIR, SESSIONS_DIR, SOLD_DIR, TWO_FA_ON_DIR, OTHER_DEVICE_DIR, UNAUTH_DIR, REJECTED_DIR]:
+    for d in [USERBOT_DIR, SESSIONS_DIR, SOLD_DIR, TWO_FA_ON_DIR, OTHER_DEVICE_DIR, UNAUTH_DIR, REJECTED_DIR, RECOVERED_DIR, ALREADY_SOLD_DIR, CANCELLED_DIR]:
         d.mkdir(exist_ok=True)
 
 
