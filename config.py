@@ -77,19 +77,22 @@ TASK_STAGGER_MIN  = 1    # detik min jeda antar launch task di reply mode
 TASK_STAGGER_MAX  = 3    # detik max
 
 # ── Proxy ──────────────────────────────────────────
+# Format proxies.txt: user:pass@host:port
+# Port dari range 10001-19999 akan dipakai PER-SESSION secara dinamis.
 PROXY_FILE = ROOT / "proxies.txt"
-_proxy_list: list[tuple] | None = None
+
+# (user, pwd, host) — di-load sekali dari baris pertama proxies.txt
+PROXY_CREDENTIALS: tuple[str, str, str] | None = None
 _proxy_index = 0
 
 
-def load_proxies() -> list[tuple]:
-    """Load proxies.txt → list of (host, port, user, pass)."""
-    global _proxy_list
-    if _proxy_list is not None:
-        return _proxy_list
-    _proxy_list = []
+def _load_proxy_credentials() -> bool:
+    """Ambil credentials proxy dari baris pertama proxies.txt."""
+    global PROXY_CREDENTIALS
+    if PROXY_CREDENTIALS is not None:
+        return True
     if not PROXY_FILE.exists():
-        return _proxy_list
+        return False
     for line in PROXY_FILE.read_text().strip().splitlines():
         line = line.strip()
         if not line:
@@ -98,22 +101,23 @@ def load_proxies() -> list[tuple]:
             creds, host_port = line.split("@")
             user, pwd = creds.split(":")
             host, port = host_port.split(":")
-            _proxy_list.append((host, int(port), user, pwd))
+            PROXY_CREDENTIALS = (user, pwd, host)
+            return True
         except Exception:
-            pass
-    print(f"🌐 Loaded {len(_proxy_list)} proxies")
-    return _proxy_list
+            continue
+    return False
 
 
 def get_next_proxy():
-    """Round-robin proxy selection. Returns Telethon-compatible proxy tuple."""
+    """Dynamic proxy per-session. Port dari range 10001-19999.
+    Returns Telethon-compatible proxy tuple: ('socks5', host, port, rdns, username, password)
+    """
     global _proxy_index
-    proxies = load_proxies()
-    if not proxies:
+    if not _load_proxy_credentials():
         return None
-    host, port, user, pwd = proxies[_proxy_index % len(proxies)]
+    user, pwd, host = PROXY_CREDENTIALS
+    port = 10001 + (_proxy_index % 9999)
     _proxy_index += 1
-    # Telethon format: (type_str, host, port, rdns, username, password)
     return ('socks5', host, port, True, user, pwd)
 
 
