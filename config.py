@@ -20,6 +20,10 @@ ALREADY_SOLD_DIR = ROOT / "ALREADY_SOLD"
 CANCELLED_DIR    = ROOT / "CANCELLED"
 ARCHIVE_DIR      = ROOT / "ARCHIVE"
 
+# World V1 (Registrasi khusus @WORLD_V1_FAST_BOT)
+WORLD_V1_BOT     = "@WORLD_V1_FAST_BOT"
+WORLD_V1_DIR     = ROOT / "WORLD_V1"
+
 # Grace period setelah buyer bilang "Successfully" sebelum logout.
 # Buyer kadang kirim reject belakangan (late rejection).
 # 60 detik cukup untuk deteksi late reject.
@@ -114,7 +118,7 @@ def get_next_proxy():
 
 
 def ensure_dirs():
-    for d in [USERBOT_DIR, SESSIONS_DIR, SOLD_DIR, TWO_FA_ON_DIR, OTHER_DEVICE_DIR, UNAUTH_DIR, REJECTED_DIR, RECOVERED_DIR, ALREADY_SOLD_DIR, CANCELLED_DIR]:
+    for d in [USERBOT_DIR, SESSIONS_DIR, SOLD_DIR, TWO_FA_ON_DIR, OTHER_DEVICE_DIR, UNAUTH_DIR, REJECTED_DIR, RECOVERED_DIR, ALREADY_SOLD_DIR, CANCELLED_DIR, WORLD_V1_DIR]:
         d.mkdir(exist_ok=True)
 
 

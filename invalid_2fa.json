@@ -1083,5 +1083,929 @@
     "bot": "-",
     "status": "invalid_2fa",
     "extra": "2fa_on_hint:"
+  },
+  {
+    "ts": "2026-06-19T04:31:00",
+    "phone": "+6282277936473",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:738YUCeD"
+  },
+  {
+    "ts": "2026-06-19T04:31:47",
+    "phone": "+6285762953878",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:786TygJD"
+  },
+  {
+    "ts": "2026-06-19T04:36:08",
+    "phone": "+6282256303380",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:80qicAXt"
+  },
+  {
+    "ts": "2026-06-19T04:37:43",
+    "phone": "+6287792875438",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:38787J2Q"
+  },
+  {
+    "ts": "2026-06-19T04:37:55",
+    "phone": "+6283874339597",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:975f4Srk"
+  },
+  {
+    "ts": "2026-06-19T04:38:39",
+    "phone": "+6285656701267",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:67A6akaO"
+  },
+  {
+    "ts": "2026-06-19T04:38:50",
+    "phone": "+6289602502676",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:76J2bjdo"
+  },
+  {
+    "ts": "2026-06-19T04:39:08",
+    "phone": "+6283806554696",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:96RTHjhY"
+  },
+  {
+    "ts": "2026-06-19T04:39:18",
+    "phone": "+6285793310610",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:10sFXPhZ"
+  },
+  {
+    "ts": "2026-06-19T04:39:30",
+    "phone": "+6282144161023",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:23eGAV4a"
+  },
+  {
+    "ts": "2026-06-19T04:40:10",
+    "phone": "+6282154683445",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:45GqfREs"
+  },
+  {
+    "ts": "2026-06-19T04:40:15",
+    "phone": "+6285930151969",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:698szYfF"
+  },
+  {
+    "ts": "2026-06-19T04:40:51",
+    "phone": "+6285964370900",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:00ulmecY"
+  },
+  {
+    "ts": "2026-06-19T04:44:26",
+    "phone": "+6282145834258",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:58Y3O0Wl"
+  },
+  {
+    "ts": "2026-06-19T04:45:57",
+    "phone": "+62895352006011",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:11CXUWPK"
+  },
+  {
+    "ts": "2026-06-19T04:46:10",
+    "phone": "+6283833008636",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:36Uq6pfg"
+  },
+  {
+    "ts": "2026-06-19T04:46:18",
+    "phone": "+6289506937641",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:41bPTOOx"
+  },
+  {
+    "ts": "2026-06-19T04:46:21",
+    "phone": "+628137892823",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:23budz5E"
+  },
+  {
+    "ts": "2026-06-19T04:46:27",
+    "phone": "+6285230465214",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:14b4LzUZ"
+  },
+  {
+    "ts": "2026-06-19T04:46:27",
+    "phone": "+6281266121923",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:23mWuWqe"
+  },
+  {
+    "ts": "2026-06-19T04:46:35",
+    "phone": "+6285719172628",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:280gWhmh"
+  },
+  {
+    "ts": "2026-06-19T04:46:46",
+    "phone": "+6283173012240",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:40t03U9B"
+  },
+  {
+    "ts": "2026-06-19T04:48:45",
+    "phone": "+6285730506052",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:52f9Jb72"
+  },
+  {
+    "ts": "2026-06-19T04:49:04",
+    "phone": "+6281267029202",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:02N86lVo"
+  },
+  {
+    "ts": "2026-06-19T04:49:12",
+    "phone": "+6281287887510",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:1071Wz1w"
+  },
+  {
+    "ts": "2026-06-19T04:49:21",
+    "phone": "+6283853727728",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:282qu2Kn"
+  },
+  {
+    "ts": "2026-06-19T04:49:31",
+    "phone": "+6288271971293",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:93sQSbHq"
+  },
+  {
+    "ts": "2026-06-19T04:49:42",
+    "phone": "+6285718828294",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:94xl4DXp"
+  },
+  {
+    "ts": "2026-06-19T04:49:43",
+    "phone": "+6285270924827",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:27IOFh6P"
+  },
+  {
+    "ts": "2026-06-19T04:49:50",
+    "phone": "+6289530499165",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:655kIiby"
+  },
+  {
+    "ts": "2026-06-19T04:49:51",
+    "phone": "+6282157472948",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:48tkMIX0"
+  },
+  {
+    "ts": "2026-06-19T04:49:54",
+    "phone": "+6281337495385",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:85NaqBis"
+  },
+  {
+    "ts": "2026-06-19T04:50:01",
+    "phone": "+62881011173717",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:171xY7oN"
+  },
+  {
+    "ts": "2026-06-19T04:50:03",
+    "phone": "+6287760600872",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:72LyNTuV"
+  },
+  {
+    "ts": "2026-06-19T04:50:13",
+    "phone": "+6285333415137",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:37QaOi6v"
+  },
+  {
+    "ts": "2026-06-19T04:50:15",
+    "phone": "+6285321937727",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:2740BqJu"
+  },
+  {
+    "ts": "2026-06-19T04:50:22",
+    "phone": "+6285854914692",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:921KT29j"
+  },
+  {
+    "ts": "2026-06-19T04:50:23",
+    "phone": "+6282153254153",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:53HKpyGJ"
+  },
+  {
+    "ts": "2026-06-19T04:50:31",
+    "phone": "+6285777120631",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:31jzz3Dw"
+  },
+  {
+    "ts": "2026-06-19T04:50:33",
+    "phone": "+6285717586396",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:96HbyOQ7"
+  },
+  {
+    "ts": "2026-06-19T04:50:41",
+    "phone": "+6282123525871",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:71wrDRPJ"
+  },
+  {
+    "ts": "2026-06-19T04:50:45",
+    "phone": "+6285692757874",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:74JYJVqx"
+  },
+  {
+    "ts": "2026-06-19T04:50:51",
+    "phone": "+6285773354158",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:583uvypO"
+  },
+  {
+    "ts": "2026-06-19T04:50:53",
+    "phone": "+62895338470102",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:02ws0BMN"
+  },
+  {
+    "ts": "2026-06-19T04:51:02",
+    "phone": "+628137892823",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:23budz5E"
+  },
+  {
+    "ts": "2026-06-19T04:51:04",
+    "phone": "+6289632962761",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:61XZU2Q7"
+  },
+  {
+    "ts": "2026-06-19T04:51:07",
+    "phone": "+6282225962645",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:45Lvzzoj"
+  },
+  {
+    "ts": "2026-06-19T04:51:13",
+    "phone": "+6281312097466",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:669Sav9p"
+  },
+  {
+    "ts": "2026-06-19T04:51:15",
+    "phone": "+6283117409898",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:98ci2I5x"
+  },
+  {
+    "ts": "2026-06-19T04:51:26",
+    "phone": "+6281330518786",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:86CYCKU5"
+  },
+  {
+    "ts": "2026-06-19T04:51:27",
+    "phone": "+62895371014016",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:16rm20qZ"
+  },
+  {
+    "ts": "2026-06-19T04:51:35",
+    "phone": "+6282249551377",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:77vvreov"
+  },
+  {
+    "ts": "2026-06-19T04:51:37",
+    "phone": "+62895321591220",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:20nKcH92"
+  },
+  {
+    "ts": "2026-06-19T04:51:44",
+    "phone": "+628983330363",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:63S2AZUk"
+  },
+  {
+    "ts": "2026-06-19T04:51:49",
+    "phone": "+6283181411314",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:14gfBc7R"
+  },
+  {
+    "ts": "2026-06-21T15:28:27",
+    "phone": "+6288971136906",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:"
+  },
+  {
+    "ts": "2026-06-21T15:28:29",
+    "phone": "+6285274044384",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:"
+  },
+  {
+    "ts": "2026-06-21T15:28:33",
+    "phone": "+6283155389470",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:"
+  },
+  {
+    "ts": "2026-06-21T15:28:34",
+    "phone": "+6287763916001",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:"
+  },
+  {
+    "ts": "2026-06-21T15:28:35",
+    "phone": "+628994139514",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:"
+  },
+  {
+    "ts": "2026-06-21T15:28:38",
+    "phone": "+628990036099",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:"
+  },
+  {
+    "ts": "2026-06-21T15:28:39",
+    "phone": "+6282160043305",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:"
+  },
+  {
+    "ts": "2026-06-21T15:28:44",
+    "phone": "+6281947427736",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:"
+  },
+  {
+    "ts": "2026-06-21T15:28:44",
+    "phone": "+6282393817012",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:"
+  },
+  {
+    "ts": "2026-06-21T15:28:47",
+    "phone": "+6285792116777",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:"
+  },
+  {
+    "ts": "2026-06-21T15:28:51",
+    "phone": "+6283894439722",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:"
+  },
+  {
+    "ts": "2026-06-21T15:28:51",
+    "phone": "+6282184151660",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:"
+  },
+  {
+    "ts": "2026-06-21T15:28:54",
+    "phone": "+6282148072520",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:"
+  },
+  {
+    "ts": "2026-06-21T15:28:56",
+    "phone": "+628179313816",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:"
+  },
+  {
+    "ts": "2026-06-21T15:28:58",
+    "phone": "+6282191569982",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:"
+  },
+  {
+    "ts": "2026-06-21T15:28:59",
+    "phone": "+6283878122526",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:"
+  },
+  {
+    "ts": "2026-06-21T15:29:01",
+    "phone": "+6283833933423",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:"
+  },
+  {
+    "ts": "2026-06-22T11:07:31",
+    "phone": "+62895320642471",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:"
+  },
+  {
+    "ts": "2026-06-29T21:26:47",
+    "phone": "+6285710641606",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:"
+  },
+  {
+    "ts": "2026-06-29T21:26:56",
+    "phone": "+6283164995274",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:"
+  },
+  {
+    "ts": "2026-06-29T21:27:05",
+    "phone": "+6285122480552",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:"
+  },
+  {
+    "ts": "2026-06-29T21:27:21",
+    "phone": "+6288298572645",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:"
+  },
+  {
+    "ts": "2026-06-30T11:09:38",
+    "phone": "+6282214438143",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:123"
+  },
+  {
+    "ts": "2026-07-09T16:23:58",
+    "phone": "+6285188437138",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:123"
+  },
+  {
+    "ts": "2026-07-09T16:49:51",
+    "phone": "+6285377250424",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:123"
+  },
+  {
+    "ts": "2026-07-09T17:02:52",
+    "phone": "+6285188437138",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:123"
+  },
+  {
+    "ts": "2026-07-09T17:08:13",
+    "phone": "+6282198352295",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:123"
+  },
+  {
+    "ts": "2026-07-09T17:28:51",
+    "phone": "+6281219294111",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:123"
+  },
+  {
+    "ts": "2026-07-09T17:31:25",
+    "phone": "+6283141607433",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:123"
+  },
+  {
+    "ts": "2026-07-09T17:34:21",
+    "phone": "+6285866135245",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:123"
+  },
+  {
+    "ts": "2026-07-09T17:58:25",
+    "phone": "+6285377250424",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:123"
+  },
+  {
+    "ts": "2026-07-09T17:58:34",
+    "phone": "+6285751850169",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:123"
+  },
+  {
+    "ts": "2026-07-09T18:04:24",
+    "phone": "+62895417917112",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:123"
+  },
+  {
+    "ts": "2026-07-09T19:20:50",
+    "phone": "+6287758299636",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:123"
+  },
+  {
+    "ts": "2026-07-09T21:43:20",
+    "phone": "+6283184441904",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:123"
+  },
+  {
+    "ts": "2026-07-09T22:42:33",
+    "phone": "+6285188437138",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:123"
+  },
+  {
+    "ts": "2026-07-10T00:57:34",
+    "phone": "+6283153535090",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:"
+  },
+  {
+    "ts": "2026-07-10T01:11:52",
+    "phone": "+6281219294111",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:123"
+  },
+  {
+    "ts": "2026-07-10T01:18:06",
+    "phone": "+6285866135245",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:123"
+  },
+  {
+    "ts": "2026-07-10T01:40:57",
+    "phone": "+6285188437138",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:123"
+  },
+  {
+    "ts": "2026-07-10T01:49:04",
+    "phone": "+6287758299636",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:123"
+  },
+  {
+    "ts": "2026-07-10T02:05:48",
+    "phone": "+6283141607433",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:123"
+  },
+  {
+    "ts": "2026-07-10T02:20:17",
+    "phone": "+6283846600052",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:"
+  },
+  {
+    "ts": "2026-07-10T02:21:41",
+    "phone": "+6283184441904",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:123"
+  },
+  {
+    "ts": "2026-07-10T02:47:03",
+    "phone": "+6285377250424",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:123"
+  },
+  {
+    "ts": "2026-07-10T02:47:11",
+    "phone": "+6285751850169",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:123"
+  },
+  {
+    "ts": "2026-07-10T02:57:36",
+    "phone": "+62895417917112",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:123"
+  },
+  {
+    "ts": "2026-07-12T13:09:02",
+    "phone": "+6285377250424",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:123"
+  },
+  {
+    "ts": "2026-07-12T13:09:13",
+    "phone": "+6285751850169",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:123"
+  },
+  {
+    "ts": "2026-07-12T13:10:57",
+    "phone": "+62895417917112",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:123"
+  },
+  {
+    "ts": "2026-07-12T15:02:26",
+    "phone": "+6285719575957",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:123"
+  },
+  {
+    "ts": "2026-07-12T15:05:02",
+    "phone": "+6285377250424",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:123"
+  },
+  {
+    "ts": "2026-07-12T15:05:06",
+    "phone": "+6285751850169",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:123"
+  },
+  {
+    "ts": "2026-07-12T15:10:31",
+    "phone": "+6285188437138",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:123"
+  },
+  {
+    "ts": "2026-07-12T15:10:38",
+    "phone": "+6287758299636",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:123"
+  },
+  {
+    "ts": "2026-07-12T16:16:15",
+    "phone": "+6281385564946",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:"
+  },
+  {
+    "ts": "2026-07-12T17:10:30",
+    "phone": "+6282211058263",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:"
+  },
+  {
+    "ts": "2026-07-12T17:11:29",
+    "phone": "+6281385564946",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:"
+  },
+  {
+    "ts": "2026-07-12T17:15:56",
+    "phone": "+6285281795785",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:"
+  },
+  {
+    "ts": "2026-07-12T17:55:23",
+    "phone": "+6285293526484",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:123"
+  },
+  {
+    "ts": "2026-07-12T18:18:06",
+    "phone": "+6285188437138",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:123"
+  },
+  {
+    "ts": "2026-07-12T18:18:21",
+    "phone": "+6287758299636",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:123"
+  },
+  {
+    "ts": "2026-07-12T18:21:35",
+    "phone": "+6283141607433",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:123"
+  },
+  {
+    "ts": "2026-07-12T18:23:55",
+    "phone": "+6283184441904",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:123"
+  },
+  {
+    "ts": "2026-07-12T18:36:47",
+    "phone": "+6285377250424",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:123"
+  },
+  {
+    "ts": "2026-07-12T18:37:01",
+    "phone": "+6285751850169",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:123"
+  },
+  {
+    "ts": "2026-07-12T18:39:53",
+    "phone": "+62895417917112",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:123"
+  },
+  {
+    "ts": "2026-07-12T19:30:00",
+    "phone": "+6285832290543",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:123"
+  },
+  {
+    "ts": "2026-07-13T00:20:39",
+    "phone": "+6285832290543",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:123"
+  },
+  {
+    "ts": "2026-07-13T00:21:59",
+    "phone": "+6285293526484",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:123"
+  },
+  {
+    "ts": "2026-07-13T19:24:54",
+    "phone": "+6285718025370",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:123"
+  },
+  {
+    "ts": "2026-07-15T21:11:49",
+    "phone": "+6287872525864",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:"
+  },
+  {
+    "ts": "2026-07-15T21:13:21",
+    "phone": "+6288971036080",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:"
+  },
+  {
+    "ts": "2026-07-15T21:13:26",
+    "phone": "+6285929882966",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:"
+  },
+  {
+    "ts": "2026-07-15T21:13:38",
+    "phone": "+6285240392158",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:"
+  },
+  {
+    "ts": "2026-07-15T21:14:28",
+    "phone": "+6285797253063",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:sairoh1234"
+  },
+  {
+    "ts": "2026-07-15T21:14:40",
+    "phone": "+628211385743",
+    "bot": "-",
+    "status": "invalid_2fa",
+    "extra": "2fa_on_hint:Aryalingga123"
   }
 ]

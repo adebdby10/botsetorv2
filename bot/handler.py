@@ -7,7 +7,7 @@ import shutil
 import zipfile
 from pathlib import Path
 
-from telethon import events, Button, TelegramClient
+from telethon import events, Button, TelegramClient, errors
 
 from config import (
     USERBOT_DIR,
@@ -22,6 +22,8 @@ from config import (
     ARCHIVE_DIR,
     ALLOWED_USERS,
     REPLY_MAX_PARALLEL,
+    WORLD_V1_BOT,
+    WORLD_V1_DIR,
     ensure_dirs,
     get_api,
 )
@@ -33,6 +35,7 @@ from engine.seller import (
     _zip_already_sold_sessions,
     _zip_cancelled_sessions,
 )
+from engine.reg_world_v1 import run_batch as run_world_v1_batch
 from utils.logger import init_logs
 
 # ─── States ────────────────────────────────────────────────────────────────────
@@ -260,6 +263,7 @@ async def _update_session_counter(bot: TelegramClient, chat_id: int, user_id: in
     text = _q(f"📥 <b>{count} session</b> sudah diterima{country_label}.")
     buttons = [
         [Button.inline(f"✅ Proses {count} Session Ini", b"confirm_sessions")],
+        [Button.inline(f"🌍 {WORLD_V1_BOT}", b"start_world_v1")],
     ]
 
     if st["counter_msg_id"]:
@@ -554,14 +558,22 @@ def register_handlers(bot: TelegramClient):
             # Nama file session: nomor tanpa +
             session_name = phone.lstrip("+")
             session_path = dest_dir / f"{session_name}.session"
-            client = TelegramClient(str(session_path), api_id, api_hash)
+            # Hapus session file lama yg mungkin corrupt/stale
+            if session_path.exists():
+                session_path.unlink()
+                print(f"🗑️ Hapus session lama: {session_path.name}")
+            from telethon.sessions import StringSession
+            ub_session = StringSession()
+            client = TelegramClient(ub_session, api_id, api_hash, device_model="")
             try:
                 await client.connect()
                 result = await client.send_code_request(phone)
                 st["ub_phone"] = phone
                 st["ub_phone_code_hash"] = result.phone_code_hash
+                st["ub_session_path"] = str(session_path)
                 st["ub_client"] = client
                 st["state"] = STATE_WAIT_UB_OTP
+                print(f"📱 OTP request sent to {phone} (hash={result.phone_code_hash[:10]}...)")
                 await event.reply(
                     _q(
                         f"📩 OTP dikirim ke <b>{phone}</b>.\n\n"
@@ -592,6 +604,7 @@ def register_handlers(bot: TelegramClient):
                 return
             client = st.get("ub_client")
             phone = st.get("ub_phone")
+            session_path_str = st.get("ub_session_path")
             if not client or not phone:
                 await event.reply(
                     _q("❌ Sesi login expired. Ketik /start untuk ulang."),
@@ -599,13 +612,31 @@ def register_handlers(bot: TelegramClient):
                 )
                 return
             try:
-                await client.sign_in(phone=phone, code=code)
-                # Sukses login
+                # sign_in dengan StringSession + phone_code_hash eksplisit
+                phone_code_hash = st.get("ub_phone_code_hash")
+                print(f"🔐 sign_in: phone={phone} code={code} hash={phone_code_hash[:10] if phone_code_hash else 'NONE'}...")
+                if phone_code_hash:
+                    await client.sign_in(phone=phone, code=code, phone_code_hash=phone_code_hash)
+                else:
+                    await client.sign_in(phone=phone, code=code)
+                # Sukses login — simpan StringSession ke file .session
                 me = await client.get_me()
+                print(f"✅ Login OK: {me.first_name} @{me.username}")
+
+                # Save StringSession → .session file
+                api_id_sv, api_hash_sv = get_api()
+                session_path = Path(session_path_str) if session_path_str else dest_dir / f"{phone.lstrip('+')}.session"
+                from telethon import TelegramClient as _TC
+                ss_cl = _TC(str(session_path), api_id_sv, api_hash_sv)
+                ss_cl.session._dc_id = client.session._dc_id
+                ss_cl.session._server_address = client.session._server_address
+                ss_cl.session._port = client.session._port
+                ss_cl.session._auth_key = client.session._auth_key
+                await ss_cl.connect()
+                await ss_cl.disconnect()
+                print(f"💾 Session saved: {session_path.name}")
+
                 await client.disconnect()
-                dest_dir = _user_userbot_dir(user_id)
-                session_name = phone.lstrip("+")
-                session_path = dest_dir / f"{session_name}.session"
                 st["userbot_file"] = session_path
                 st["ub_client"] = None
                 st["state"] = STATE_WAIT_SESSIONS
@@ -618,10 +649,44 @@ def register_handlers(bot: TelegramClient):
                     ),
                     parse_mode="html",
                 )
+            except errors.SessionPasswordNeededError:
+                # 2FA required — langsung minta password, jangan disconnect
+                st["state"] = STATE_WAIT_UB_2FA
+                await event.reply(
+                    _q(
+                        "🔒 Akun ini menggunakan 2FA.\n\n"
+                        "Ketik password 2FA:"
+                    ),
+                    buttons=[[Button.inline("❌ Batal", b"cancel_ub_login")]],
+                    parse_mode="html",
+                )
+            except errors.PhoneCodeExpiredError:
+                await event.reply(
+                    _q(
+                        "⚠️ Kode OTP expired.\n\n"
+                        "Gunakan tombol <b>🔄 Kirim Ulang OTP</b> untuk minta kode baru."
+                    ),
+                    buttons=[[Button.inline("🔄 Kirim Ulang OTP", b"resend_otp"), Button.inline("❌ Batal", b"cancel_ub_login")]],
+                    parse_mode="html",
+                )
+            except errors.PhoneCodeInvalidError:
+                await event.reply(
+                    _q(
+                        "⚠️ Kode OTP salah.\n\n"
+                        "Ketik ulang kode OTP yang benar:"
+                    ),
+                    buttons=[[Button.inline("🔄 Kirim Ulang OTP", b"resend_otp"), Button.inline("❌ Batal", b"cancel_ub_login")]],
+                    parse_mode="html",
+                )
+            except errors.FloodWaitError as fw:
+                await event.reply(
+                    _q(f"⚠️ Flood wait {fw.seconds} detik. Tunggu sebentar."),
+                    parse_mode="html",
+                )
             except Exception as e:
                 err = str(e)
-                # Cek apakah butuh 2FA password
-                if "password" in err.lower() or "SessionPasswordNeededError" in err:
+                if "password" in err.lower():
+                    # Fallback detection for other password errors
                     st["state"] = STATE_WAIT_UB_2FA
                     await event.reply(
                         _q(
@@ -632,24 +697,15 @@ def register_handlers(bot: TelegramClient):
                         parse_mode="html",
                     )
                 else:
-                    # OTP expired/salah → kirim ulang kode OTP baru otomatis
-                    try:
-                        new_result = await client.send_code_request(phone)
-                        st["ub_phone_code_hash"] = new_result.phone_code_hash
-                        await event.reply(
-                            _q(
-                                f"⚠️ OTP expired/salah: <code>{err}</code>\n\n"
-                                f"📩 OTP baru sudah dikirim ke <b>{phone}</b>.\n"
-                                "Ketik kode OTP baru:"
-                            ),
-                            buttons=[[Button.inline("🔄 Kirim Ulang OTP", b"resend_otp"), Button.inline("❌ Batal", b"cancel_ub_login")]],
-                            parse_mode="html",
-                        )
-                    except Exception as re_err:
-                        await event.reply(
-                            _q(f"❌ OTP expired. Gagal kirim ulang: <code>{re_err}</code>\n\nKetik /start untuk ulang dari awal."),
-                            parse_mode="html",
-                        )
+                    await event.reply(
+                        _q(
+                            f"⚠️ <code>{err}</code>\n\n"
+                            "Gunakan tombol <b>🔄 Kirim Ulang OTP</b> untuk coba lagi,"
+                            " atau /start untuk ulang dari awal."
+                        ),
+                        buttons=[[Button.inline("🔄 Kirim Ulang OTP", b"resend_otp"), Button.inline("❌ Batal", b"cancel_ub_login")]],
+                        parse_mode="html",
+                    )
             return
 
         # ── Login manual: input 2FA password ────────────────────────────────
@@ -657,6 +713,7 @@ def register_handlers(bot: TelegramClient):
             password = raw
             client = st.get("ub_client")
             phone = st.get("ub_phone")
+            session_path_str = st.get("ub_session_path")
             if not client or not phone:
                 await event.reply(
                     _q("❌ Sesi login expired. Ketik /start untuk ulang."),
@@ -664,12 +721,26 @@ def register_handlers(bot: TelegramClient):
                 )
                 return
             try:
+                print(f"🔑 sign_in dengan password untuk {phone}")
                 await client.sign_in(password=password)
                 me = await client.get_me()
+                print(f"✅ Login 2FA OK: {me.first_name}")
+
+                # Save StringSession → file .session
+                api_id_2fa, api_hash_2fa = get_api()
+                session_path = Path(session_path_str) if session_path_str else None
+                if session_path:
+                    from telethon import TelegramClient as _TC
+                    ss_client = _TC(str(session_path), api_id_2fa, api_hash_2fa)
+                    ss_client.session._dc_id = client.session._dc_id
+                    ss_client.session._server_address = client.session._server_address
+                    ss_client.session._port = client.session._port
+                    ss_client.session._auth_key = client.session._auth_key
+                    await ss_client.connect()
+                    await ss_client.disconnect()
+                    print(f"💾 Session saved (2FA): {session_path.name}")
+
                 await client.disconnect()
-                dest_dir = _user_userbot_dir(user_id)
-                session_name = phone.lstrip("+")
-                session_path = dest_dir / f"{session_name}.session"
                 st["userbot_file"] = session_path
                 st["ub_client"] = None
                 st["state"] = STATE_WAIT_SESSIONS
@@ -682,16 +753,40 @@ def register_handlers(bot: TelegramClient):
                     ),
                     parse_mode="html",
                 )
-            except Exception as e2:
+            except errors.SessionPasswordNeededError:
+                print("🔒 2FA required (password needed)")
                 await event.reply(
-                    _q(f"❌ Password 2FA salah: <code>{e2}</code>\n\nKetik ulang password atau /start untuk batal."),
+                    _q("🔒 Masukkan password 2FA:"),
+                    buttons=[[Button.inline("❌ Batal", b"cancel_ub_login")]],
                     parse_mode="html",
                 )
+            except errors.PasswordHashInvalidError:
+                print("❌ 2FA password salah")
+                await event.reply(
+                    _q("❌ Password 2FA salah. Ketik ulang password:"),
+                    buttons=[[Button.inline("❌ Batal", b"cancel_ub_login")]],
+                    parse_mode="html",
+                )
+            except Exception as e2:
+                err2 = str(e2)
+                print(f"❌ 2FA error: {err2}")
+                if "password" in err2.lower() or "invalid" in err2.lower():
+                    await event.reply(
+                        _q("❌ Password 2FA salah. Ketik ulang password:"),
+                        buttons=[[Button.inline("❌ Batal", b"cancel_ub_login")]],
+                        parse_mode="html",
+                    )
+                else:
+                    await event.reply(
+                        _q(f"❌ <code>{err2}</code>\n\nKetik ulang password atau /start untuk batal."),
+                        parse_mode="html",
+                    )
             return
 
         if st["state"] == STATE_WAIT_BOT:
             uname = raw if raw.startswith("@") else f"@{raw}"
             st["bot_username"] = uname
+
             st["state"] = STATE_WAIT_MODE
             await event.reply(
                 _q(
@@ -874,6 +969,37 @@ def register_handlers(bot: TelegramClient):
                 ),
                 parse_mode="html",
             )
+            return
+
+        # Mulai registrasi World V1 (langsung tanpa input bot/mode)
+        if data == b"start_world_v1":
+            if st["state"] != STATE_WAIT_SESSIONS:
+                await event.answer("Tidak ada sesi upload aktif.", alert=True)
+                return
+            if not st["sessions"]:
+                await event.answer("Belum ada session yang diupload.", alert=True)
+                return
+            if _is_worker_running(user_id):
+                await event.answer("Masih ada proses berjalan.", alert=True)
+                return
+
+            st["mode"] = "world_v1"
+            st["bot_username"] = WORLD_V1_BOT
+            n_sessions = len(st["sessions"])
+
+            st["state"] = STATE_PROCESSING
+            await event.answer()
+            await event.edit(
+                _q(
+                    f"🌍 <b>Mode: Registrasi {WORLD_V1_BOT}</b>\n\n"
+                    f"🚀 Memulai <b>{n_sessions} session</b> untuk registrasi\n\n"
+                    f"<i>Proses berjalan di background. Hasil akan dikirim setelah selesai...</i>"
+                ),
+                parse_mode="html",
+            )
+
+            task = asyncio.create_task(_run_worker(bot, user_id, chat_id))
+            _active_workers[user_id] = task
             return
 
         # Pilih mode
@@ -1084,7 +1210,7 @@ async def _sortir_2fa(sessions: list[Path], api_id, api_hash, want_2fa: bool) ->
     for sp in sessions:
         client = None
         try:
-            client = TelegramClient(str(sp), _api_id, _api_hash)
+            client = TelegramClient(str(sp), _api_id, _api_hash, device_model="")
             await client.connect()
             # Cek apakah sudah authorized
             if not await client.is_user_authorized():
@@ -1310,7 +1436,52 @@ async def _do_automation(bot: TelegramClient, user_id: int, chat_id: int):
             print(f"⚠️ event_cb [{event_type}][{phone}]: {e}")
 
     try:
-        if mode == "receiver":
+        if mode == "world_v1":
+            # Flow World V1 — registrasi via @WORLD_V1_FAST_BOT
+            result = await run_world_v1_batch(
+                admin_client=userbot_client,
+                api_id=api_id,
+                api_hash=api_hash,
+                session_files=sessions,
+                progress_cb=on_progress,
+                event_cb=event_cb,
+                stop_event=stop_event,
+            )
+
+            n_success  = (result or {}).get("success", 0)
+            n_error    = (result or {}).get("error", 0)
+            n_skipped  = (result or {}).get("skipped", 0)
+            n_rejected = (result or {}).get("rejected", 0)
+            total_proc = total_sessions
+
+            try:
+                await bot.delete_messages(chat_id, [prog_msg_id])
+            except Exception:
+                pass
+
+            summary_lines = [
+                f"🌍 <b>Registrasi {WORLD_V1_BOT} Selesai</b>\n\n",
+                f"Total        : <b>{total_proc}</b>",
+                f"✅ Berhasil    : <b>{n_success}</b>",
+                f"❌ Error       : <b>{n_error}</b>",
+                f"⏭ Skipped     : <b>{n_skipped}</b>",
+                f"🚫 Rejected    : <b>{n_rejected}</b>",
+            ]
+
+            if n_error > 0:
+                summary_lines.append(f"\n📂 Session error tersimpan di: <code>WORLD_V1/error/</code>")
+            if n_rejected > 0:
+                summary_lines.append(f"📂 Session rejected: <code>WORLD_V1/rejected/</code>")
+
+            final_text = _q("\n".join(summary_lines))
+
+            await bot.send_message(
+                chat_id, final_text,
+                buttons=[[Button.inline("🌍 Mulai Registrasi Lagi", b"setor_lagi")]],
+                parse_mode="html",
+            )
+
+        elif mode == "receiver":
             # Flow receiver — sequential, setor satu per satu (bisa banyak)
             result = await sell_sessions_with_bot(
                 api_id=api_id,
@@ -1336,111 +1507,123 @@ async def _do_automation(bot: TelegramClient, user_id: int, chat_id: int):
                 stop_event=stop_event,
             )
 
-        n_success      = (result or {}).get("success", 0)
-        n_recovered    = (result or {}).get("recovered", 0)
-        n_already_sold = (result or {}).get("already_sold", 0)
-        n_cancelled    = (result or {}).get("cancelled", 0)
-        n_other_fail   = total_sessions - n_success - n_recovered - n_already_sold - n_cancelled
+        # ── Result processing untuk mode SELAIN world_v1 ──
+        if mode != "world_v1":
+            n_success      = (result or {}).get("success", 0)
+            n_recovered    = (result or {}).get("recovered", 0)
+            n_already_sold = (result or {}).get("already_sold", 0)
+            n_cancelled    = (result or {}).get("cancelled", 0)
+            n_other_fail   = total_sessions - n_success - n_recovered - n_already_sold - n_cancelled
 
-        # Zip recovered + already_sold + cancelled sessions sebelum archive
-        zip_recovered     = _zip_recovered_sessions()
-        zip_already_sold  = _zip_already_sold_sessions()
-        zip_cancelled     = _zip_cancelled_sessions()
+            # Hitung breakdown gagal per kategori (sebelum archive)
+            fail_counts = _count_failed_sessions(user_id)
 
-        # Archive batch before cleanup
-        failed_categories = [
-            (TWO_FA_ON_DIR     / str(user_id), "2fa_on"),
-            (OTHER_DEVICE_DIR  / str(user_id), "device"),
-            (UNAUTH_DIR        / str(user_id), "unauth"),
-            (REJECTED_DIR      / str(user_id), "rejected"),
-            (RECOVERED_DIR     / str(user_id), "recovered"),
-            (ALREADY_SOLD_DIR  / str(user_id), "already_sold"),
-            (CANCELLED_DIR     / str(user_id), "cancelled"),
-        ]
-        _archive_batch(user_id, sessions, failed_categories)
+            # Zip recovered + already_sold + cancelled sessions sebelum archive
+            zip_recovered     = _zip_recovered_sessions()
+            zip_already_sold  = _zip_already_sold_sessions()
+            zip_cancelled     = _zip_cancelled_sessions()
 
-        # Build gagal detail
-        gagal_detail = ""
-        if n_other_fail > 0:
-            gagal_parts = []
+            # Archive batch before cleanup
+            failed_categories = [
+                (TWO_FA_ON_DIR     / str(user_id), "2fa_on"),
+                (OTHER_DEVICE_DIR  / str(user_id), "device"),
+                (UNAUTH_DIR        / str(user_id), "unauth"),
+                (REJECTED_DIR      / str(user_id), "rejected"),
+                (RECOVERED_DIR     / str(user_id), "recovered"),
+                (ALREADY_SOLD_DIR  / str(user_id), "already_sold"),
+                (CANCELLED_DIR     / str(user_id), "cancelled"),
+            ]
+            _archive_batch(user_id, sessions, failed_categories)
+
+            # Build gagal detail with per-category breakdown
+            gagal_detail = ""
             if n_other_fail > 0:
-                gagal_parts.append(f"Error = {n_other_fail}")
-            gagal_detail = f" ({', '.join(gagal_parts)})"
+                gagal_parts = []
+                if fail_counts.get("2fa_on", 0) > 0:
+                    gagal_parts.append(f"2FA ON = {fail_counts['2fa_on']}")
+                if fail_counts.get("device", 0) > 0:
+                    gagal_parts.append(f"Device lain = {fail_counts['device']}")
+                if fail_counts.get("unauth", 0) > 0:
+                    gagal_parts.append(f"Unauth = {fail_counts['unauth']}")
+                accounted = fail_counts.get("2fa_on", 0) + fail_counts.get("device", 0) + fail_counts.get("unauth", 0) + fail_counts.get("rejected", 0)
+                remaining = n_other_fail - accounted
+                if remaining > 0:
+                    gagal_parts.append(f"Error = {remaining}")
+                gagal_detail = "\n  " + "\n  ".join(gagal_parts)
 
-        processed = n_success + n_recovered + n_already_sold + n_other_fail
-        header = f"Selesai memproses <b>{total_sessions}</b> session ke <code>{bot_username}</code>."
-        if n_cancelled > 0:
-            # Cek apakah cancelled karena capacity full atau user stop
-            n_other_fail = total_sessions - n_success - n_recovered - n_already_sold - n_cancelled
-            if n_other_fail < 0:
-                n_other_fail = 0
             processed = n_success + n_recovered + n_already_sold + n_other_fail
-            header = f"⛔ Buyer Penuh — <b>{processed}/{total_sessions}</b> session diproses ke <code>{bot_username}</code>.\nCapacity Indonesia sudah penuh.\n\n"
+            header = f"Selesai memproses <b>{total_sessions}</b> session ke <code>{bot_username}</code>."
+            if n_cancelled > 0:
+                n_other_fail = total_sessions - n_success - n_recovered - n_already_sold - n_cancelled
+                if n_other_fail < 0:
+                    n_other_fail = 0
+                processed = n_success + n_recovered + n_already_sold + n_other_fail
+                header = f"⛔ Buyer Penuh — <b>{processed}/{total_sessions}</b> session diproses ke <code>{bot_username}</code>.\nCapacity Indonesia sudah penuh.\n\n"
 
-        summary_lines = [
-            f"{header}\n\n",
-            f"Berhasil     : <b>{n_success}</b>",
-        ]
-        if n_already_sold > 0:
-            summary_lines.append(f"Sudah pernah di setor : <b>{n_already_sold}</b>")
-        summary_lines.append(f"Recovered    : <b>{n_recovered}")
-        summary_lines.append(f"Gagal        : <b>{n_other_fail}</b>{gagal_detail}")
-        if n_cancelled > 0:
-            summary_lines.append(f"Dibatalkan   : <b>{n_cancelled}</b>")
+            summary_lines = [
+                f"{header}\n\n",
+                f"Berhasil     : <b>{n_success}</b>",
+            ]
+            if n_already_sold > 0:
+                summary_lines.append(f"Sudah pernah di setor : <b>{n_already_sold}</b>")
+            summary_lines.append(f"Recovered    : <b>{n_recovered}</b>")
+            summary_lines.append(f"Gagal        : <b>{n_other_fail}</b>{gagal_detail}")
+            if n_cancelled > 0:
+                summary_lines.append(f"Dibatalkan   : <b>{n_cancelled}</b>")
 
-        final_text = _q("\n".join(summary_lines))
+            final_text = _q("\n".join(summary_lines))
 
-        try:
-            await bot.delete_messages(chat_id, [prog_msg_id])
-        except Exception:
-            pass
-        await bot.send_message(
-            chat_id, final_text,
-            buttons=[[Button.inline("🔄 Setor Lagi", b"setor_lagi")]],
-            parse_mode="html",
-        )
-
-        # Kirim zip recovered ke user
-        if zip_recovered and zip_recovered.exists():
             try:
-                await bot.send_file(
-                    chat_id,
-                    str(zip_recovered),
-                    caption=_q(f"📦 <b>{n_recovered}</b> session berhasil di-recover\n"
-                               f"Akun ini di-reject buyer tapi berhasil diambil alih kembali."),
-                    parse_mode="html",
-                )
-                zip_recovered.unlink(missing_ok=True)
-            except Exception as e:
-                print(f"⚠️ Gagal kirim zip recovered: {e}")
+                await bot.delete_messages(chat_id, [prog_msg_id])
+            except Exception:
+                pass
+            await bot.send_message(
+                chat_id, final_text,
+                buttons=[[Button.inline("🔄 Setor Lagi", b"setor_lagi")]],
+                parse_mode="html",
+            )
 
-        # Kirim zip already_sold ke user
-        if zip_already_sold and zip_already_sold.exists():
-            try:
-                await bot.send_file(
-                    chat_id,
-                    str(zip_already_sold),
-                    caption=_q(f"📦 <b>{n_already_sold}</b> session sudah pernah terjual\n"
-                               f"Akun ini sudah pernah dijual sebelumnya."),
-                    parse_mode="html",
-                )
-                zip_already_sold.unlink(missing_ok=True)
-            except Exception as e:
-                print(f"⚠️ Gagal kirim zip already_sold: {e}")
+            # Kirim zip recovered ke user
+            if zip_recovered and zip_recovered.exists():
+                try:
+                    await bot.send_file(
+                        chat_id,
+                        str(zip_recovered),
+                        caption=_q(f"📦 <b>{n_recovered}</b> session berhasil di-recover\n"
+                                   f"Akun ini di-reject buyer tapi berhasil diambil alih kembali."),
+                        parse_mode="html",
+                    )
+                    zip_recovered.unlink(missing_ok=True)
+                except Exception as e:
+                    print(f"⚠️ Gagal kirim zip recovered: {e}")
 
-        # Kirim zip cancelled ke user
-        if zip_cancelled and zip_cancelled.exists():
-            try:
-                await bot.send_file(
-                    chat_id,
-                    str(zip_cancelled),
-                    caption=_q(f"📦 <b>{n_cancelled}</b> session dibatalkan\n"
-                               f"Session ini belum diproses dan bisa dipakai lagi."),
-                    parse_mode="html",
-                )
-                zip_cancelled.unlink(missing_ok=True)
-            except Exception as e:
-                print(f"⚠️ Gagal kirim zip cancelled: {e}")
+            # Kirim zip already_sold ke user
+            if zip_already_sold and zip_already_sold.exists():
+                try:
+                    await bot.send_file(
+                        chat_id,
+                        str(zip_already_sold),
+                        caption=_q(f"📦 <b>{n_already_sold}</b> session sudah pernah terjual\n"
+                                   f"Akun ini sudah pernah dijual sebelumnya."),
+                        parse_mode="html",
+                    )
+                    zip_already_sold.unlink(missing_ok=True)
+                except Exception as e:
+                    print(f"⚠️ Gagal kirim zip already_sold: {e}")
+
+            # Kirim zip cancelled ke user
+            if zip_cancelled and zip_cancelled.exists():
+                try:
+                    await bot.send_file(
+                        chat_id,
+                        str(zip_cancelled),
+                        caption=_q(f"📦 <b>{n_cancelled}</b> session dibatalkan\n"
+                                   f"Session ini belum diproses dan bisa dipakai lagi."),
+                        parse_mode="html",
+                    )
+                    zip_cancelled.unlink(missing_ok=True)
+                except Exception as e:
+                    print(f"⚠️ Gagal kirim zip cancelled: {e}")
 
     except Exception as e:
         await bot.send_message(

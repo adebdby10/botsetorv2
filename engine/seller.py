@@ -374,7 +374,7 @@ async def sell_one_session(
 ) -> bool:
 
     _proxy = get_next_proxy()
-    selling_client = TelegramClient(StringSession(_make_string_session(session_path)), api_id, api_hash, proxy=_proxy)
+    selling_client = TelegramClient(StringSession(_make_string_session(session_path)), api_id, api_hash, proxy=_proxy, device_model="")
     user_id = None
     try:
         try:
@@ -1177,7 +1177,7 @@ async def sell_one_session_reply_mode(
     """
 
     _proxy = get_next_proxy()
-    selling_client = TelegramClient(StringSession(_make_string_session(session_path)), api_id, api_hash, proxy=_proxy)
+    selling_client = TelegramClient(StringSession(_make_string_session(session_path)), api_id, api_hash, proxy=_proxy, device_model="")
     user_id = None
     try:
         # connect & auth
