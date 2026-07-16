@@ -90,6 +90,28 @@ def _move_session(session_path: Path, subfolder: str) -> bool:
     return True
 
 
+def _make_string_session(session_path: Path) -> str:
+    """Load .session file → return StringSession string (in-memory, no file writes).
+    Always set port=443 for proxy compatibility."""
+    import sqlite3
+    from telethon.sessions import StringSession as _SS
+    from telethon.crypto import AuthKey
+    db = sqlite3.connect(str(session_path))
+    try:
+        row = db.execute("SELECT dc_id, server_address, port, auth_key FROM sessions LIMIT 1").fetchone()
+        if not row or not row[3]:
+            raise ValueError("No valid auth data")
+        dc_id, server_address, port, auth_key = row
+        ss = _SS()
+        ss._dc_id = dc_id
+        ss._server_address = server_address
+        ss._port = 443
+        ss._auth_key = AuthKey(auth_key[:256])
+        return ss.save()
+    finally:
+        db.close()
+
+
 def _get_proxy_tuple():
     """Ambil random proxy dari config."""
     proxy = get_next_proxy()
@@ -597,7 +619,8 @@ async def process_one(
     str_session = None
     try:
         from telethon.sessions import StringSession
-        str_session = StringSession()
+        session_string = _make_string_session(session_path)
+        str_session = StringSession(session_string)
         client = TelegramClient(
             str_session,
             api_id, api_hash,
@@ -607,6 +630,9 @@ async def process_one(
             request_retries=3,
             retry_delay=2,
         )
+    except ValueError:
+        print(f"{prefix} ❌ Session file tidak punya auth data (corrupt)")
+        return "session_corrupt"
     except Exception as e:
         print(f"{prefix} ❌ Gagal buat client: {e}")
         return "session_corrupt"
@@ -818,9 +844,9 @@ async def _reset_auth_and_move(session_path: Path, phone: str, prefix: str):
     api_id, api_hash = get_api()
     client = None
     try:
-        str_session = None
         from telethon.sessions import StringSession
-        str_session = StringSession()
+        session_string = _make_string_session(session_path)
+        str_session = StringSession(session_string)
         client = TelegramClient(str_session, api_id, api_hash, timeout=15,
                                 connection_retries=2, request_retries=2)
         await client.connect()
